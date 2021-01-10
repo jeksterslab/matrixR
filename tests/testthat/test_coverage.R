@@ -30,6 +30,12 @@ test_that("nonsquare matrix", {
   expect_false(
     is_sqr(X)
   )
+  expect_false(
+    is_posdef(X)
+  )
+  expect_false(
+    is_inv(X)
+  )
 })
 X <- matrix(
   data = "text",
