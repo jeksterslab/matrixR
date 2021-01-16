@@ -57,7 +57,16 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
+      <a href="../../articles/tests/test_LS.html">Test: LS</a>
+    </li>
+    <li>
+      <a href="../../articles/tests/test_cor2cov.html">Test: cor2cov</a>
+    </li>
+    <li>
       <a href="../../articles/tests/test_coverage.html">Test: Coverage</a>
+    </li>
+    <li>
+      <a href="../../articles/tests/test_is_diag.html">Test: is_diag</a>
     </li>
     <li>
       <a href="../../articles/tests/test_is_inv.html">Test: is_inv</a>
@@ -103,7 +112,7 @@
       <h1 data-toc-skip>Test: Coverage</h1>
                         <h4 class="author">Ivan Jacob Agaloos Pesigan</h4>
             
-            <h4 class="date">2021-01-10</h4>
+            <h4 class="date">2021-01-16</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/jeksterslab/matrixR/blob/master/vignettes/tests/test_coverage.Rmd"><code>vignettes/tests/test_coverage.Rmd</code></a></small>
       <div class="hidden name"><code>test_coverage.Rmd</code></div>
@@ -117,37 +126,71 @@
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/jeksterslab/matrixR">matrixR</a></span><span class="op">)</span>
 <span class="fu"><a href="https://testthat.r-lib.org/reference/context.html">context</a></span><span class="op">(</span><span class="st">"Test Coverage."</span><span class="op">)</span></code></pre></div>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>
+<code class="sourceCode R"><span class="va">A</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>
   data <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span>,
   ncol <span class="op">=</span> <span class="fl">2</span>
 <span class="op">)</span>
 <span class="fu"><a href="https://testthat.r-lib.org/reference/test_that.html">test_that</a></span><span class="op">(</span><span class="st">"nonsquare matrix"</span>, <span class="op">{</span>
   <span class="fu"><a href="https://testthat.r-lib.org/reference/logical-expectations.html">expect_false</a></span><span class="op">(</span>
-    <span class="fu"><a href="../../reference/is_sqr.html">is_sqr</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span>
+    <span class="fu"><a href="../../reference/is_sqr.html">is_sqr</a></span><span class="op">(</span><span class="va">A</span><span class="op">)</span>
   <span class="op">)</span>
   <span class="fu"><a href="https://testthat.r-lib.org/reference/logical-expectations.html">expect_false</a></span><span class="op">(</span>
-    <span class="fu"><a href="../../reference/is_posdef.html">is_posdef</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span>
+    <span class="fu"><a href="../../reference/is_posdef.html">is_posdef</a></span><span class="op">(</span><span class="va">A</span><span class="op">)</span>
   <span class="op">)</span>
   <span class="fu"><a href="https://testthat.r-lib.org/reference/logical-expectations.html">expect_false</a></span><span class="op">(</span>
-    <span class="fu"><a href="../../reference/is_inv.html">is_inv</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span>
+    <span class="fu"><a href="../../reference/is_inv.html">is_inv</a></span><span class="op">(</span><span class="va">A</span><span class="op">)</span>
+  <span class="op">)</span>
+  <span class="fu"><a href="https://testthat.r-lib.org/reference/logical-expectations.html">expect_false</a></span><span class="op">(</span>
+    <span class="fu"><a href="../../reference/is_diag.html">is_diag</a></span><span class="op">(</span><span class="va">A</span><span class="op">)</span>
   <span class="op">)</span>
 <span class="op">}</span><span class="op">)</span>
-<span class="co">#&gt; Test passed 🎊</span>
-<span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>
+<span class="co">#&gt; Test passed 🥳</span>
+<span class="va">B</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>
   data <span class="op">=</span> <span class="st">"text"</span>,
   nrow <span class="op">=</span> <span class="fl">2</span>,
   ncol <span class="op">=</span> <span class="fl">2</span>
 <span class="op">)</span>
 <span class="fu"><a href="https://testthat.r-lib.org/reference/test_that.html">test_that</a></span><span class="op">(</span><span class="st">"nonnumeric"</span>, <span class="op">{</span>
   <span class="fu"><a href="https://testthat.r-lib.org/reference/expect_error.html">expect_error</a></span><span class="op">(</span>
-    <span class="fu"><a href="../../reference/is_sqr.html">is_sqr</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span>
+    <span class="fu"><a href="../../reference/is_sqr.html">is_sqr</a></span><span class="op">(</span><span class="va">B</span><span class="op">)</span>
+  <span class="op">)</span>
+<span class="op">}</span><span class="op">)</span>
+<span class="co">#&gt; Test passed 🥳</span>
+<span class="va">C</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span>
+<span class="fu"><a href="https://testthat.r-lib.org/reference/test_that.html">test_that</a></span><span class="op">(</span><span class="st">"vector"</span>, <span class="op">{</span>
+  <span class="fu"><a href="https://testthat.r-lib.org/reference/expect_error.html">expect_error</a></span><span class="op">(</span>
+    <span class="fu"><a href="../../reference/is_sqr.html">is_sqr</a></span><span class="op">(</span><span class="va">C</span><span class="op">)</span>
   <span class="op">)</span>
 <span class="op">}</span><span class="op">)</span>
 <span class="co">#&gt; Test passed 🥇</span>
-<span class="va">X</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span>
-<span class="fu"><a href="https://testthat.r-lib.org/reference/test_that.html">test_that</a></span><span class="op">(</span><span class="st">"vector"</span>, <span class="op">{</span>
+
+
+
+
+<span class="va">D</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>
+  data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">1</span><span class="op">)</span>,
+  ncol <span class="op">=</span> <span class="fl">2</span>
+<span class="op">)</span>
+<span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>
+<span class="fu"><a href="https://testthat.r-lib.org/reference/test_that.html">test_that</a></span><span class="op">(</span><span class="st">"cor2cov - is_posdef"</span>, <span class="op">{</span>
   <span class="fu"><a href="https://testthat.r-lib.org/reference/expect_error.html">expect_error</a></span><span class="op">(</span>
-    <span class="fu"><a href="../../reference/is_sqr.html">is_sqr</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span>
+    <span class="fu"><a href="../../reference/cor2cov.html">cor2cov</a></span><span class="op">(</span><span class="va">D</span>, <span class="va">v</span><span class="op">)</span>
+  <span class="op">)</span>
+<span class="op">}</span><span class="op">)</span>
+<span class="co">#&gt; Test passed 😸</span>
+<span class="va">E</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>
+  data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>
+    <span class="fl">1</span>,
+    <span class="fl">.5</span>,
+    <span class="fl">.5</span>,
+    <span class="fl">1</span>
+  <span class="op">)</span>,
+  ncol <span class="op">=</span> <span class="fl">2</span>
+<span class="op">)</span>
+<span class="va">u</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span>
+<span class="fu"><a href="https://testthat.r-lib.org/reference/test_that.html">test_that</a></span><span class="op">(</span><span class="st">"cor2cov - v is positive"</span>, <span class="op">{</span>
+  <span class="fu"><a href="https://testthat.r-lib.org/reference/expect_error.html">expect_error</a></span><span class="op">(</span>
+    <span class="fu"><a href="../../reference/cor2cov.html">cor2cov</a></span><span class="op">(</span><span class="va">E</span>, <span class="va">u</span><span class="op">)</span>
   <span class="op">)</span>
 <span class="op">}</span><span class="op">)</span>
 <span class="co">#&gt; Test passed 🥇</span></code></pre></div>

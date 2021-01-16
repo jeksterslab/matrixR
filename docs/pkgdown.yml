@@ -1,15 +1,18 @@
-pandoc: 2.11.2
+pandoc: 2.11.3
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   matrixR: matrixR.html
+  tests/test_LS: test_LS.html
+  tests/test_cor2cov: test_cor2cov.html
   tests/test_coverage: test_coverage.html
+  tests/test_is_diag: test_is_diag.html
   tests/test_is_inv: test_is_inv.html
   tests/test_is_posdef: test_is_posdef.html
   tests/test_is_sing: test_is_sing.html
   tests/test_is_sqr: test_is_sqr.html
   tests/test_is_sym: test_is_sym.html
-last_built: 2021-01-10T11:03Z
+last_built: 2021-01-16T11:10Z
 urls:
   reference: https://github.com/jeksterslab/matrixR//reference
   article: https://github.com/jeksterslab/matrixR//articles

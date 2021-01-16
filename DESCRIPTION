@@ -28,5 +28,6 @@ Imports:
 Suggests:
     knitr,
     rmarkdown,
-    testthat
+    testthat,
+    MASS
 RoxygenNote: 7.1.1

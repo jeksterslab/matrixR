@@ -4,13 +4,13 @@
 \alias{is_sqr}
 \title{Is the Matrix Square?}
 \usage{
-is_sqr(X)
+is_sqr(A)
 }
 \arguments{
-\item{X}{Numeric matrix.}
+\item{A}{Numeric matrix.}
 }
 \description{
-Is the Matrix Square?
+Checks if a matrix is square \eqn{\left( \mathbf{A}_{m \times m} \right)} .
 }
 \examples{
 A <- matrix(
@@ -24,9 +24,9 @@ B <- matrix(
 )
 dim(B)
 # Returns TRUE
-is_sqr(X = B)
+is_sqr(B)
 # Returns FALSE
-is_sqr(X = A)
+is_sqr(A)
 }
 \references{
 \href{https://en.wikipedia.org/wiki/Square_matrix}{Wikipedia: Square matrix}

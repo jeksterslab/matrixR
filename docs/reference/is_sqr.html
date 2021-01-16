@@ -40,7 +40,7 @@
 
 
 <meta property="og:title" content="Is the Matrix Square? — is_sqr" />
-<meta property="og:description" content="Is the Matrix Square?" />
+<meta property="og:description" content="Checks if a matrix is square \(\left( \mathbf{A}_{m \times m} \right)\) ." />
 
 
 
@@ -98,7 +98,16 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
+      <a href="../articles/tests/test_LS.html">Test: LS</a>
+    </li>
+    <li>
+      <a href="../articles/tests/test_cor2cov.html">Test: cor2cov</a>
+    </li>
+    <li>
       <a href="../articles/tests/test_coverage.html">Test: Coverage</a>
+    </li>
+    <li>
+      <a href="../articles/tests/test_is_diag.html">Test: is_diag</a>
     </li>
     <li>
       <a href="../articles/tests/test_is_inv.html">Test: is_inv</a>
@@ -147,16 +156,16 @@
     </div>
 
     <div class="ref-description">
-    <p>Is the Matrix Square?</p>
+    <p>Checks if a matrix is square \(\left( \mathbf{A}_{m \times m} \right)\) .</p>
     </div>
 
-    <pre class="usage"><span class='fu'>is_sqr</span><span class='op'>(</span><span class='va'>X</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>is_sqr</span><span class='op'>(</span><span class='va'>A</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>X</th>
+      <th>A</th>
       <td><p>Numeric matrix.</p></td>
     </tr>
     </table>
@@ -180,9 +189,9 @@
 <span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/base/dim.html'>dim</a></span><span class='op'>(</span><span class='va'>B</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] 5 2</div><div class='input'><span class='co'># Returns TRUE</span>
-<span class='fu'>is_sqr</span><span class='op'>(</span>X <span class='op'>=</span> <span class='va'>B</span><span class='op'>)</span>
+<span class='fu'>is_sqr</span><span class='op'>(</span><span class='va'>B</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] FALSE</div><div class='input'><span class='co'># Returns FALSE</span>
-<span class='fu'>is_sqr</span><span class='op'>(</span>X <span class='op'>=</span> <span class='va'>A</span><span class='op'>)</span>
+<span class='fu'>is_sqr</span><span class='op'>(</span><span class='va'>A</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] TRUE</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

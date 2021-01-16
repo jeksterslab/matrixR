@@ -4,16 +4,16 @@
 \alias{is_sing}
 \title{Is the Matrix Singular?}
 \usage{
-is_sing(X, tol = 1e-08)
+is_sing(A, tol = 1e-08)
 }
 \arguments{
-\item{X}{Numeric matrix.}
+\item{A}{Numeric matrix.}
 
 \item{tol}{Numeric.
 Tolerance.}
 }
 \description{
-Is the Matrix Singular?
+Checks if a square matrix is noninvertible or singular.
 }
 \examples{
 Sigma <- matrix(
@@ -24,7 +24,7 @@ Sigma <- matrix(
   ),
   ncol = 3
 )
-is_sing(X = Sigma)
+is_sing(Sigma)
 }
 \references{
 \href{https://en.wikipedia.org/wiki/Invertible_matrix}{Wikipedia: Invertible Matrix}

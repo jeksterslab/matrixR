@@ -4,16 +4,16 @@
 \alias{is_posdef}
 \title{Is the Matrix Positive Definite?}
 \usage{
-is_posdef(X, tol = 1e-08)
+is_posdef(A, tol = 1e-08)
 }
 \arguments{
-\item{X}{Numeric matrix.}
+\item{A}{Numeric matrix.}
 
 \item{tol}{Numeric.
 Tolerance.}
 }
 \description{
-Is the Matrix Positive Definite?
+Checks if eigenvalues in a square matrix are positive.
 }
 \examples{
 Sigma <- matrix(
@@ -24,7 +24,7 @@ Sigma <- matrix(
   ),
   ncol = 3
 )
-is_posdef(X = Sigma)
+is_posdef(Sigma)
 }
 \references{
 \href{https://en.wikipedia.org/wiki/Definiteness_of_a_matrix}{Wikipedia: Definiteness of a Matrix}

@@ -4,6 +4,15 @@
     <loc>https://github.com/jeksterslab/matrixR//index.html</loc>
   </url>
   <url>
+    <loc>https://github.com/jeksterslab/matrixR//reference/LS.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/matrixR//reference/cor2cov.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/matrixR//reference/is_diag.html</loc>
+  </url>
+  <url>
     <loc>https://github.com/jeksterslab/matrixR//reference/is_inv.html</loc>
   </url>
   <url>
@@ -25,7 +34,16 @@
     <loc>https://github.com/jeksterslab/matrixR//articles/matrixR.html</loc>
   </url>
   <url>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_LS.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_cor2cov.html</loc>
+  </url>
+  <url>
     <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_coverage.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_is_diag.html</loc>
   </url>
   <url>
     <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_is_inv.html</loc>

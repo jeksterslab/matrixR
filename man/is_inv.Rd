@@ -4,16 +4,16 @@
 \alias{is_inv}
 \title{Is the Matrix Invertible?}
 \usage{
-is_inv(X, tol = 1e-08)
+is_inv(A, tol = 1e-08)
 }
 \arguments{
-\item{X}{Numeric matrix.}
+\item{A}{Numeric matrix.}
 
 \item{tol}{Numeric.
 Tolerance.}
 }
 \description{
-Is the Matrix Invertible?
+Checks if a square matrix is invertible.
 }
 \examples{
 Sigma <- matrix(
@@ -24,7 +24,7 @@ Sigma <- matrix(
   ),
   ncol = 3
 )
-is_inv(X = Sigma)
+is_inv(Sigma)
 }
 \references{
 \href{https://en.wikipedia.org/wiki/Invertible_matrix}{Wikipedia: Invertible Matrix}

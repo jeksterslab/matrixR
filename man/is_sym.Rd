@@ -4,13 +4,13 @@
 \alias{is_sym}
 \title{Is the Matrix Symmetric?}
 \usage{
-is_sym(X)
+is_sym(A)
 }
 \arguments{
-\item{X}{Numeric matrix.}
+\item{A}{Numeric matrix.}
 }
 \description{
-Is the Matrix Symmetric?
+Checks if a matrix is symmetric \eqn{\left( \mathbf{A} = \mathbf{A}^{\mathsf{T}} \right)}.
 }
 \examples{
 Sigma <- matrix(
@@ -21,7 +21,7 @@ Sigma <- matrix(
   ),
   ncol = 3
 )
-is_sym(X = Sigma)
+is_sym(Sigma)
 }
 \author{
 Ivan Jacob Agaloos Pesigan
