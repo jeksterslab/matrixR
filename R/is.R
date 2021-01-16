@@ -2,7 +2,9 @@
 #'
 #' @title Is the Matrix Square?
 #'
-#' @param X Numeric matrix.
+#' @description Checks if a matrix is square \eqn{\left( \mathbf{A}_{m \times m} \right)} .
+#'
+#' @param A Numeric matrix.
 #' @examples
 #' A <- matrix(
 #'   data = 1:9,
@@ -15,24 +17,24 @@
 #' )
 #' dim(B)
 #' # Returns TRUE
-#' is_sqr(X = B)
+#' is_sqr(B)
 #' # Returns FALSE
-#' is_sqr(X = A)
+#' is_sqr(A)
 #' @references
 #'   [Wikipedia: Square matrix](https://en.wikipedia.org/wiki/Square_matrix)
 #' @export
-is_sqr <- function(X) {
-  if (!is.numeric(X)) {
+is_sqr <- function(A) {
+  if (!is.numeric(A)) {
     stop(
-      "`X` should be numeric."
+      "`Input should be numeric."
     )
   }
-  if (!is.matrix(X)) {
+  if (!is.matrix(A)) {
     stop(
-      "`X` should be a matrix."
+      "Input should be of class `matrix`."
     )
   }
-  if (dim(X)[1] == dim(X)[2]) {
+  if (dim(A)[1] == dim(A)[2]) {
     return(TRUE)
   } else {
     return(FALSE)
@@ -42,6 +44,8 @@ is_sqr <- function(X) {
 #' @author Ivan Jacob Agaloos Pesigan
 #'
 #' @title Is the Matrix Symmetric?
+#'
+#' @description Checks if a matrix is symmetric \eqn{\left( \mathbf{A} = \mathbf{A}^{\mathsf{T}} \right)}.
 #'
 #' @inheritParams is_sqr
 #' @examples
@@ -53,11 +57,13 @@ is_sqr <- function(X) {
 #'   ),
 #'   ncol = 3
 #' )
-#' is_sym(X = Sigma)
+#' is_sym(Sigma)
 #' @export
-is_sym <- function(X) {
-  if (is_sqr(X = X)) {
-    return(sum(X == t(X)) == (nrow(X)^2))
+is_sym <- function(A) {
+  if (is_sqr(A)) {
+    return(
+      sum(A == t(A)) == ((dim(A)[1])^2)
+    )
   } else {
     return(FALSE)
   }
@@ -66,6 +72,8 @@ is_sym <- function(X) {
 #' @author Ivan Jacob Agaloos Pesigan
 #'
 #' @title Is the Matrix Positive Definite?
+#'
+#' @description Checks if eigenvalues in a square matrix are positive.
 #'
 #' @inheritParams is_sym
 #' @param tol Numeric.
@@ -79,24 +87,14 @@ is_sym <- function(X) {
 #'   ),
 #'   ncol = 3
 #' )
-#' is_posdef(X = Sigma)
+#' is_posdef(Sigma)
 #' @references
 #'   [Wikipedia: Definiteness of a Matrix](https://en.wikipedia.org/wiki/Definiteness_of_a_matrix)
 #' @export
-is_posdef <- function(X,
+is_posdef <- function(A,
                       tol = 1e-8) {
-  if (is_sym(X = X)) {
-    eigenvalues <- eigen(
-      x = X,
-      only.values = TRUE
-    )$values
-    p <- dim(X)[1]
-    for (i in 1:p) {
-      if (abs(eigenvalues[i] < tol)) {
-        eigenvalues[i] <- 0
-      }
-    }
-    if (any(eigenvalues <= 0)) {
+  if (is_sym(A)) {
+    if (any(eigen(A, only.values = TRUE)$values < tol)) {
       return(FALSE)
     } else {
       return(TRUE)
@@ -110,6 +108,8 @@ is_posdef <- function(X,
 #'
 #' @title Is the Matrix Invertible?
 #'
+#' @description Checks if a square matrix is invertible.
+#'
 #' @inheritParams is_posdef
 #' @examples
 #' Sigma <- matrix(
@@ -120,16 +120,16 @@ is_posdef <- function(X,
 #'   ),
 #'   ncol = 3
 #' )
-#' is_inv(X = Sigma)
+#' is_inv(Sigma)
 #' @references
 #'   [Wikipedia: Invertible Matrix](https://en.wikipedia.org/wiki/Invertible_matrix)
 #'
 #'   [Wikipedia: Singular Matrix](https://en.wikipedia.org/wiki/Singular_matrix)
 #' @export
-is_inv <- function(X,
+is_inv <- function(A,
                    tol = 1e-8) {
-  if (is_sqr(X = X)) {
-    if (det(X) < tol) {
+  if (is_sqr(A)) {
+    if (det(A) < tol) {
       return(FALSE)
     } else {
       return(TRUE)
@@ -143,6 +143,8 @@ is_inv <- function(X,
 #'
 #' @title Is the Matrix Singular?
 #'
+#' @description Checks if a square matrix is noninvertible or singular.
+#'
 #' @inheritParams is_inv
 #' @inherit is_inv references
 #' @examples
@@ -154,13 +156,13 @@ is_inv <- function(X,
 #'   ),
 #'   ncol = 3
 #' )
-#' is_sing(X = Sigma)
+#' is_sing(Sigma)
 #' @export
-is_sing <- function(X,
+is_sing <- function(A,
                     tol = 1e-8) {
   return(
     !is_inv(
-      X = X,
+      A,
       tol = tol
     )
   )
