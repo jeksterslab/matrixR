@@ -167,3 +167,54 @@ is_sing <- function(A,
     )
   )
 }
+
+#' @author Ivan Jacob Agaloos Pesigan
+#'
+#' @title Is the Matrix Diagonal?
+#'
+#' @description Checks if off-diagonal elements of a square matrix are all zeroes.
+#'
+#' @details The off-diagonal elements are added and compared to a tolerance value.
+#'   If the sum is less than or equal to the tolerance value,
+#'   all the elements are assumed to be zeroes.
+#'
+#' @inheritParams is_posdef
+#' @examples
+#' I <- diag(3)
+#' I
+#' is_diag(I)
+#' @references
+#' [Wikipedia: Diagonal matrix](https://en.wikipedia.org/wiki/Diagonal_matrix)
+#' @export
+is_diag <- function(A,
+                    tol = 1e-8) {
+  if (!is_sqr(A)) {
+    return(FALSE)
+  } else {
+    diag(A) <- rep(
+      x = 0,
+      length = dim(A)[1]
+    )
+    if (sum(as.vector(A)) < tol) {
+      return(TRUE)
+    } else {
+      return(FALSE)
+    }
+  }
+}
+
+# is_idempot <- function(A) {
+#  if (!is.numeric(A)) {
+#    stop(
+#      "`Input should be numeric."
+#    )
+#  }
+#  if (!is.matrix(A)) {
+#    stop(
+#      "Input should be of class `matrix`."
+#    )
+#  }
+#  return(
+#    all(crossprod(A) == A)
+#  )
+# }
