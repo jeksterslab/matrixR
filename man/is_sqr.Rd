@@ -4,10 +4,13 @@
 \alias{is_sqr}
 \title{Is the Matrix Square?}
 \usage{
-is_sqr(A)
+is_sqr(A, chk.num = TRUE)
 }
 \arguments{
 \item{A}{Numeric matrix.}
+
+\item{chk.num}{Logical.
+Check if the input matrix is numeric.}
 }
 \description{
 Checks if a matrix is square \eqn{\left( \mathbf{A}_{m \times m} \right)} .

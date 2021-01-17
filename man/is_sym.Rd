@@ -4,10 +4,13 @@
 \alias{is_sym}
 \title{Is the Matrix Symmetric?}
 \usage{
-is_sym(A)
+is_sym(A, chk.num = TRUE)
 }
 \arguments{
 \item{A}{Numeric matrix.}
+
+\item{chk.num}{Logical.
+Check if the input matrix is numeric.}
 }
 \description{
 Checks if a matrix is symmetric \eqn{\left( \mathbf{A} = \mathbf{A}^{\mathsf{T}} \right)}.
