@@ -5,6 +5,8 @@
 #' @description Checks if a matrix is square \eqn{\left( \mathbf{A}_{m \times m} \right)} .
 #'
 #' @param A Numeric matrix.
+#' @param chk.num Logical.
+#'   Check if the input matrix is numeric.
 #' @examples
 #' A <- matrix(
 #'   data = 1:9,
@@ -23,11 +25,14 @@
 #' @references
 #'   [Wikipedia: Square matrix](https://en.wikipedia.org/wiki/Square_matrix)
 #' @export
-is_sqr <- function(A) {
-  if (!is.numeric(A)) {
-    stop(
-      "`Input should be numeric."
-    )
+is_sqr <- function(A,
+                   chk.num = TRUE) {
+  if (chk.num) {
+    if (!is.numeric(A)) {
+      stop(
+        "`Input should be numeric."
+      )
+    }
   }
   if (!is.matrix(A)) {
     stop(
@@ -59,8 +64,9 @@ is_sqr <- function(A) {
 #' )
 #' is_sym(Sigma)
 #' @export
-is_sym <- function(A) {
-  if (is_sqr(A)) {
+is_sym <- function(A,
+                   chk.num = TRUE) {
+  if (is_sqr(A, chk.num)) {
     return(
       sum(A == t(A)) == ((dim(A)[1])^2)
     )
