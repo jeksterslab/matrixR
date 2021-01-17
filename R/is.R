@@ -39,11 +39,9 @@ is_sqr <- function(A,
       "Input should be of class `matrix`."
     )
   }
-  if (dim(A)[1] == dim(A)[2]) {
-    return(TRUE)
-  } else {
-    return(FALSE)
-  }
+  return(
+    dim(A)[1] == dim(A)[2]
+  )
 }
 
 #' @author Ivan Jacob Agaloos Pesigan
@@ -66,13 +64,11 @@ is_sqr <- function(A,
 #' @export
 is_sym <- function(A,
                    chk.num = TRUE) {
+  out <- FALSE
   if (is_sqr(A, chk.num)) {
-    return(
-      sum(A == t(A)) == ((dim(A)[1])^2)
-    )
-  } else {
-    return(FALSE)
+    out <- sum(A == t(A)) == ((dim(A)[1])^2)
   }
+  return(out)
 }
 
 #' @author Ivan Jacob Agaloos Pesigan
@@ -99,15 +95,11 @@ is_sym <- function(A,
 #' @export
 is_posdef <- function(A,
                       tol = 1e-8) {
+  out <- FALSE
   if (is_sym(A)) {
-    if (any(eigen(A, only.values = TRUE)$values < tol)) {
-      return(FALSE)
-    } else {
-      return(TRUE)
-    }
-  } else {
-    return(FALSE)
+    out <- !any(eigen(A, only.values = TRUE)$values < tol)
   }
+  return(out)
 }
 
 #' @author Ivan Jacob Agaloos Pesigan
@@ -134,15 +126,11 @@ is_posdef <- function(A,
 #' @export
 is_inv <- function(A,
                    tol = 1e-8) {
+  out <- FALSE
   if (is_sqr(A)) {
-    if (det(A) < tol) {
-      return(FALSE)
-    } else {
-      return(TRUE)
-    }
-  } else {
-    return(FALSE)
+    out <- !(det(A) < tol)
   }
+  return(out)
 }
 
 #' @author Ivan Jacob Agaloos Pesigan
@@ -194,19 +182,15 @@ is_sing <- function(A,
 #' @export
 is_diag <- function(A,
                     tol = 1e-8) {
-  if (!is_sqr(A)) {
-    return(FALSE)
-  } else {
+  out <- FALSE
+  if (is_sqr(A)) {
     diag(A) <- rep(
       x = 0,
       length = dim(A)[1]
     )
-    if (sum(as.vector(A)) < tol) {
-      return(TRUE)
-    } else {
-      return(FALSE)
-    }
+    out <- sum(as.vector(A)) < tol
   }
+  return(out)
 }
 
 # is_idempot <- function(A) {
