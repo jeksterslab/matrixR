@@ -151,8 +151,9 @@ cov2cor <- function(A) {
 #' A
 #' low2sym(A)
 #' @export
-low2sym <- function(A) {
-  if (!is_sqr(A)) {
+low2sym <- function(A,
+                    chk.num = TRUE) {
+  if (!is_sqr(A, chk.num)) {
     stop(
       "Input should be a square matrix."
     )
@@ -177,8 +178,9 @@ low2sym <- function(A) {
 #' A
 #' up2sym(A)
 #' @export
-up2sym <- function(A) {
-  if (!is_sqr(A)) {
+up2sym <- function(A,
+                   chk.num = TRUE) {
+  if (!is_sqr(A, chk.num)) {
     stop(
       "Input should be a square matrix."
     )
