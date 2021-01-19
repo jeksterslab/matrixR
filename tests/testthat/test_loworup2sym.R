@@ -27,20 +27,23 @@ context("Test low2sym and up2sym.")
 #+ results
 A <- matrix(NA, ncol = 4, nrow = 4)
 A[lower.tri(A, diag = TRUE)] <- 1:10
-low2sym(A)
-A <- matrix(NA, ncol = 4, nrow = 4)
-A[upper.tri(A, diag = TRUE)] <- 1:10
-up2sym(A)
-is_sym(up2sym(A))
+A
+B <- low2sym(A)
+B
+C <- matrix(NA, ncol = 4, nrow = 4)
+C[upper.tri(C, diag = TRUE)] <- 1:10
+C
+D <- up2sym(C)
+D
 #'
 #+ testhat
 test_that("low2sym", {
   expect_true(
-    is_sym(low2sym(A))
+    is_sym(B)
   )
 })
 test_that("up2sym", {
   expect_true(
-    is_sym(up2sym(A))
+    is_sym(D)
   )
 })

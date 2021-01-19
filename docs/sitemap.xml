@@ -43,9 +43,6 @@
     <loc>https://github.com/jeksterslab/matrixR//articles/matrixR.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/matrixR//articles/tests/loworup2sym.html</loc>
-  </url>
-  <url>
     <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_LS.html</loc>
   </url>
   <url>
@@ -74,5 +71,8 @@
   </url>
   <url>
     <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_is_sym.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_loworup2sym.html</loc>
   </url>
 </urlset>

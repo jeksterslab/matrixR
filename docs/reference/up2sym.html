@@ -99,9 +99,6 @@ of a square matrix." />
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/tests/loworup2sym.html">Test: low2sym and up2sym</a>
-    </li>
-    <li>
       <a href="../articles/tests/test_LS.html">Test: LS</a>
     </li>
     <li>
@@ -130,6 +127,9 @@ of a square matrix." />
     </li>
     <li>
       <a href="../articles/tests/test_is_sym.html">Test: is_sym</a>
+    </li>
+    <li>
+      <a href="../articles/tests/test_loworup2sym.html">Test: low2sym and up2sym</a>
     </li>
   </ul>
 </li>
@@ -167,7 +167,7 @@ of a square matrix." />
 of a square matrix.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>up2sym</span><span class='op'>(</span><span class='va'>A</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>up2sym</span><span class='op'>(</span><span class='va'>A</span>, chk.num <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -175,6 +175,11 @@ of a square matrix.</p>
     <tr>
       <th>A</th>
       <td><p>Numeric matrix.</p></td>
+    </tr>
+    <tr>
+      <th>chk.num</th>
+      <td><p>Logical.
+Check if the input matrix is numeric.</p></td>
     </tr>
     </table>
 
@@ -194,12 +199,9 @@ of a square matrix.</p>
 #&gt; [1,]    1    2    4    7
 #&gt; [2,]   NA    3    5    8
 #&gt; [3,]   NA   NA    6    9
-#&gt; [4,]   NA   NA   NA   10</div><div class='input'><span class='fu'>up2sym</span><span class='op'>(</span><span class='va'>A</span><span class='op'>)</span>
-</div><div class='output co'>#&gt;      [,1] [,2] [,3] [,4]
-#&gt; [1,]    1    2    4    7
-#&gt; [2,]    2    3    5    8
-#&gt; [3,]    4    5    6    9
-#&gt; [4,]    7    8    9   10</div></pre>
+#&gt; [4,]   NA   NA   NA   10</div><div class='input'><span class='va'>B</span> <span class='op'>&lt;-</span> <span class='fu'>up2sym</span><span class='op'>(</span><span class='va'>A</span><span class='op'>)</span>
+<span class='fu'><a href='is_sym.html'>is_sym</a></span><span class='op'>(</span><span class='va'>B</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] TRUE</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

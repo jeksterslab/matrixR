@@ -4,10 +4,13 @@
 \alias{up2sym}
 \title{Upper Triangle to Symmetric}
 \usage{
-up2sym(A)
+up2sym(A, chk.num = TRUE)
 }
 \arguments{
 \item{A}{Numeric matrix.}
+
+\item{chk.num}{Logical.
+Check if the input matrix is numeric.}
 }
 \value{
 Returns a symmetric matrix.
@@ -20,7 +23,8 @@ of a square matrix.
 A <- matrix(NA, ncol = 4, nrow = 4)
 A[upper.tri(A, diag = TRUE)] <- 1:10
 A
-up2sym(A)
+B <- up2sym(A)
+is_sym(B)
 }
 \author{
 Ivan Jacob Agaloos Pesigan
