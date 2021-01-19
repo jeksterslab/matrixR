@@ -98,10 +98,16 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
+      <a href="../articles/tests/loworup2sym.html">Test: low2sym and up2sym</a>
+    </li>
+    <li>
       <a href="../articles/tests/test_LS.html">Test: LS</a>
     </li>
     <li>
       <a href="../articles/tests/test_cor2cov.html">Test: cor2cov</a>
+    </li>
+    <li>
+      <a href="../articles/tests/test_cov2cor.html">Test: cov2cor</a>
     </li>
     <li>
       <a href="../articles/tests/test_coverage.html">Test: Coverage</a>
@@ -151,7 +157,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Correlation to Covariance</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jeksterslab/matrixR/blob/master/R/cor2cov.R'><code>R/cor2cov.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/jeksterslab/matrixR/blob/master/R/convert.R'><code>R/convert.R</code></a></small>
     <div class="hidden name"><code>cor2cov.Rd</code></div>
     </div>
 
@@ -185,12 +191,12 @@ A vector of \(p \times 1\) standard deviations.</p></td>
 <p>$$
     \left(
       \mathbf{v}
-      \mathbf{I}_{p}
+      \mathbf{I}
     \right)
     \mathbf{A}
     \left(
       \mathbf{v}
-      \mathbf{I}_{p}
+      \mathbf{I}
     \right)
   $$</p>
 <p>where</p><ul>

@@ -1,7 +1,7 @@
 Matrix/Linear Algebra
 ================
 Ivan Jacob Agaloos Pesigan
-2021-01-17
+2021-01-19
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 <!-- badges: start -->

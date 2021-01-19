@@ -2,9 +2,12 @@
 
 export(LS)
 export(cor2cov)
+export(cov2cor)
 export(is_diag)
 export(is_inv)
 export(is_posdef)
 export(is_sing)
 export(is_sqr)
 export(is_sym)
+export(low2sym)
+export(up2sym)

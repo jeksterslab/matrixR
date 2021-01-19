@@ -39,6 +39,12 @@ test_that("nonsquare matrix", {
   expect_false(
     is_diag(A)
   )
+  expect_error(
+    low2sym(A)
+  )
+  expect_error(
+    up2sym(A)
+  )
 })
 B <- matrix(
   data = "text",
@@ -56,10 +62,6 @@ test_that("vector", {
     is_sqr(C)
   )
 })
-
-
-
-
 D <- matrix(
   data = c(1, 2, 2, 1),
   ncol = 2
@@ -68,6 +70,11 @@ v <- c(1, 2)
 test_that("cor2cov - is_posdef", {
   expect_error(
     cor2cov(D, v)
+  )
+})
+test_that("cov2cor - is_posdef", {
+  expect_error(
+    cov2cor(D)
   )
 })
 E <- matrix(

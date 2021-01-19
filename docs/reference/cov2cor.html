@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Is the Matrix Invertible? — is_inv • matrixR</title>
+<title>Covariance to Correlation — cov2cor • matrixR</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Is the Matrix Invertible? — is_inv" />
-<meta property="og:description" content="Checks if a square matrix is invertible." />
+<meta property="og:title" content="Covariance to Correlation — cov2cor" />
+<meta property="og:description" content="Converts a covariance matrix to a correlation matrix." />
 
 
 
@@ -156,50 +156,75 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Is the Matrix Invertible?</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jeksterslab/matrixR/blob/master/R/is.R'><code>R/is.R</code></a></small>
-    <div class="hidden name"><code>is_inv.Rd</code></div>
+    <h1>Covariance to Correlation</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jeksterslab/matrixR/blob/master/R/convert.R'><code>R/convert.R</code></a></small>
+    <div class="hidden name"><code>cov2cor.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Checks if a square matrix is invertible.</p>
+    <p>Converts a covariance matrix to a correlation matrix.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>is_inv</span><span class='op'>(</span><span class='va'>A</span>, tol <span class='op'>=</span> <span class='fl'>1e-08</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>cov2cor</span><span class='op'>(</span><span class='va'>A</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>A</th>
-      <td><p>Numeric matrix.</p></td>
-    </tr>
-    <tr>
-      <th>tol</th>
-      <td><p>Numeric.
-Tolerance.</p></td>
+      <td><p>Numeric matrix.
+A \(p \times p\) positive definite covariance matrix.</p></td>
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p><a href='https://en.wikipedia.org/wiki/Invertible_matrix'>Wikipedia: Invertible Matrix</a></p>
-<p><a href='https://en.wikipedia.org/wiki/Singular_matrix'>Wikipedia: Singular Matrix</a></p>
+    <p>Returns a correlation matrix.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>The correlation matrix is given by</p>
+<p>$$
+    \left(
+      \mathbf{v}
+      \mathbf{I}
+    \right)^{-1}
+    \mathbf{A}
+    \left(
+      \mathbf{v}
+      \mathbf{I}
+    \right)^{-1}
+  $$</p>
+<p>where</p><ul>
+<li><p>\(\mathbf{A}_{p \times p}\) is a covariance matrix,</p></li>
+<li><p>\(\mathbf{I}_{p \times p}\) is an identity matrix,</p></li>
+<li><p>\(\mathbf{v}_{p \times 1}\) is a vector of standard deviations,
+that is, the square root of the diagonal elements of \(\mathbf{A}\).</p></li>
+</ul>
+
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
     <p>Ivan Jacob Agaloos Pesigan</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='va'>Sigma</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span>
+    <pre class="examples"><div class='input'><span class='va'>A</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span>
   data <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span>
-    <span class='fl'>225</span>, <span class='fl'>112.50</span>, <span class='fl'>56.25</span>,
-    <span class='fl'>112.5</span>, <span class='fl'>225</span>, <span class='fl'>112.5</span>,
-    <span class='fl'>56.25</span>, <span class='fl'>112.50</span>, <span class='fl'>225</span>
+    <span class='fl'>225.0000</span>, <span class='fl'>114.7279</span>, <span class='fl'>58.5000</span>,
+    <span class='fl'>114.7279</span>, <span class='fl'>225.0000</span>, <span class='fl'>114.7279</span>,
+    <span class='fl'>58.5000</span>, <span class='fl'>114.7279</span>, <span class='fl'>225.0000</span>
   <span class='op'>)</span>,
   ncol <span class='op'>=</span> <span class='fl'>3</span>
 <span class='op'>)</span>
-<span class='fu'>is_inv</span><span class='op'>(</span><span class='va'>Sigma</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] TRUE</div></pre>
+
+<span class='fu'>stats</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>cov2cor</a></span><span class='op'>(</span><span class='va'>A</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;           [,1]      [,2]      [,3]
+#&gt; [1,] 1.0000000 0.5099018 0.2600000
+#&gt; [2,] 0.5099018 1.0000000 0.5099018
+#&gt; [3,] 0.2600000 0.5099018 1.0000000</div><div class='input'>
+<span class='fu'>matrixR</span><span class='fu'>::</span><span class='fu'>cov2cor</span><span class='op'>(</span><span class='va'>A</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;           [,1]      [,2]      [,3]
+#&gt; [1,] 1.0000000 0.5099018 0.2600000
+#&gt; [2,] 0.5099018 1.0000000 0.5099018
+#&gt; [3,] 0.2600000 0.5099018 1.0000000</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
