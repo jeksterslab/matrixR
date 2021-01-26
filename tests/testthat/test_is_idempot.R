@@ -73,27 +73,27 @@ rownames(matrix_F) <- paste0("row", 1:nrow(matrix_F))
 knitr::kable(
   x = matrix_F,
   row.names = TRUE,
-  caption = "Non-Nilpotent Matrix"
+  caption = "Non-Idempotent Matrix"
 )
 knitr::kable(
   x = matrix_T_1,
   row.names = TRUE,
-  caption = "Nilpotent Matrix"
+  caption = "Idempotent Matrix"
 )
 knitr::kable(
   x = matrix_T_2,
   row.names = TRUE,
-  caption = "Nilpotent Matrix"
+  caption = "Idempotent Matrix"
 )
 knitr::kable(
   x = matrix_T_3,
   row.names = TRUE,
-  caption = "Nilpotent Matrix"
+  caption = "Idempotent Matrix"
 )
 knitr::kable(
   x = matrix_T_4,
   row.names = TRUE,
-  caption = "Nilpotent Matrix"
+  caption = "Idempotent Matrix"
 )
 #'
 #' ## Results
@@ -102,11 +102,11 @@ knitr::kable(
 knitr::kable(
   x = data.frame(
     Item = c(
-      "Non-Nilpotent Matrix",
-      "Nilpotent Matrix",
-      "Nilpotent Matrix",
-      "Nilpotent Matrix",
-      "Nilpotent Matrix"
+      "Non-Idempotent Matrix",
+      "Idempotent Matrix",
+      "Idempotent Matrix",
+      "Idempotent Matrix",
+      "Idempotent Matrix"
     ),
     Parameter = c(
       "FALSE",

@@ -268,9 +268,7 @@ is_idempot <- function(A,
                        tol = 1e-8) {
   out <- FALSE
   if (is_sqr(A)) {
-    out <- all(
-      sum(A %*% A - A) < tol
-    )
+    out <- sum(abs(A %*% A - A)) < tol
   } else {
     warning(
       "Input is not a square matrix."

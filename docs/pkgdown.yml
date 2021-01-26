@@ -17,8 +17,9 @@ articles:
   tests/test_is_sym: test_is_sym.html
   tests/test_loworup2sym: test_loworup2sym.html
   tests/test_ones: test_ones.html
+  tests/test_pow: test_pow.html
   tests/test_zeroes: test_zeroes.html
-last_built: 2021-01-26T17:39Z
+last_built: 2021-01-26T18:56Z
 urls:
   reference: https://github.com/jeksterslab/matrixR//reference
   article: https://github.com/jeksterslab/matrixR//articles

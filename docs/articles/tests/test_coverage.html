@@ -99,6 +99,9 @@
       <a href="../../articles/tests/test_ones.html">Test: ones*</a>
     </li>
     <li>
+      <a href="../../articles/tests/test_pow.html">Test: pow</a>
+    </li>
+    <li>
       <a href="../../articles/tests/test_zeroes.html">Test: zeroes*</a>
     </li>
   </ul>
@@ -184,6 +187,9 @@
   <span class="fu"><a href="https://testthat.r-lib.org/reference/logical-expectations.html">expect_false</a></span><span class="op">(</span>
     <span class="fu"><a href="../../reference/is_idempot.html">is_idempot</a></span><span class="op">(</span><span class="va">A</span><span class="op">)</span>
   <span class="op">)</span>
+  <span class="fu"><a href="https://testthat.r-lib.org/reference/expect_error.html">expect_error</a></span><span class="op">(</span>
+    <span class="fu"><a href="../../reference/pow.html">pow</a></span><span class="op">(</span><span class="va">A</span>, <span class="fl">0</span><span class="op">)</span>
+  <span class="op">)</span>
 <span class="op">}</span><span class="op">)</span>
 <span class="co">#&gt; ── Warning (&lt;text&gt;:9:3): nonsquare matrix ──────────────────────────────────────</span>
 <span class="co">#&gt; Input is not a symmetric matrix.</span>
@@ -249,13 +255,13 @@
     <span class="fu"><a href="../../reference/cor2cov.html">cor2cov</a></span><span class="op">(</span><span class="va">D</span>, <span class="va">v</span><span class="op">)</span>
   <span class="op">)</span>
 <span class="op">}</span><span class="op">)</span>
-<span class="co">#&gt; Test passed 🥇</span>
+<span class="co">#&gt; Test passed 🎉</span>
 <span class="fu"><a href="https://testthat.r-lib.org/reference/test_that.html">test_that</a></span><span class="op">(</span><span class="st">"cov2cor - is_posdef"</span>, <span class="op">{</span>
   <span class="fu"><a href="https://testthat.r-lib.org/reference/expect_error.html">expect_error</a></span><span class="op">(</span>
     <span class="fu"><a href="../../reference/cov2cor.html">cov2cor</a></span><span class="op">(</span><span class="va">D</span><span class="op">)</span>
   <span class="op">)</span>
 <span class="op">}</span><span class="op">)</span>
-<span class="co">#&gt; Test passed 🌈</span>
+<span class="co">#&gt; Test passed 🎊</span>
 <span class="va">E</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>
   data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>
     <span class="fl">1</span>,
@@ -271,7 +277,7 @@
     <span class="fu"><a href="../../reference/cor2cov.html">cor2cov</a></span><span class="op">(</span><span class="va">E</span>, <span class="va">u</span><span class="op">)</span>
   <span class="op">)</span>
 <span class="op">}</span><span class="op">)</span>
-<span class="co">#&gt; Test passed 😀</span></code></pre></div>
+<span class="co">#&gt; Test passed 🥳</span></code></pre></div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
