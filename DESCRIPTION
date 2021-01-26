@@ -9,7 +9,7 @@ Authors@R:
         email = "i.j.a.pesigan@connect.um.edu.mo",
         comment = c(ORCID = "0000-0003-4818-8420")
     )
-Description: A collection of functions I use in studying
+Description: A collection of functions related to
     Matrix/Linear Algebra.
 License: MIT + file LICENSE
 Encoding: UTF-8

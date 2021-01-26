@@ -7,7 +7,7 @@
 low2sym(A, chk.num = TRUE)
 }
 \arguments{
-\item{A}{Numeric matrix.}
+\item{A}{Matrix.}
 
 \item{chk.num}{Logical.
 Check if the input matrix is numeric.}
@@ -24,6 +24,7 @@ A <- matrix(NA, ncol = 4, nrow = 4)
 A[lower.tri(A, diag = TRUE)] <- 1:10
 A
 B <- low2sym(A)
+B
 is_sym(B)
 }
 \author{

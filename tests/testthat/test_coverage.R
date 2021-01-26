@@ -45,6 +45,12 @@ test_that("nonsquare matrix", {
   expect_error(
     up2sym(A)
   )
+  expect_error(
+    ones(dim(A)[1], dim(A)[2])
+  )
+  expect_error(
+    ones_from(A)
+  )
 })
 B <- matrix(
   data = "text",

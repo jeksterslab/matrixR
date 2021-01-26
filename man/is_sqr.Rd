@@ -7,7 +7,7 @@
 is_sqr(A, chk.num = TRUE)
 }
 \arguments{
-\item{A}{Numeric matrix.}
+\item{A}{Matrix.}
 
 \item{chk.num}{Logical.
 Check if the input matrix is numeric.}
@@ -27,9 +27,9 @@ B <- matrix(
 )
 dim(B)
 # Returns TRUE
-is_sqr(B)
-# Returns FALSE
 is_sqr(A)
+# Returns FALSE
+is_sqr(B)
 }
 \references{
 \href{https://en.wikipedia.org/wiki/Square_matrix}{Wikipedia: Square matrix}

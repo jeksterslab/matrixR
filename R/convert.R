@@ -150,6 +150,7 @@ cov2cor <- function(A) {
 #' A[lower.tri(A, diag = TRUE)] <- 1:10
 #' A
 #' B <- low2sym(A)
+#' B
 #' is_sym(B)
 #' @export
 low2sym <- function(A,
@@ -178,6 +179,7 @@ low2sym <- function(A,
 #' A[upper.tri(A, diag = TRUE)] <- 1:10
 #' A
 #' B <- up2sym(A)
+#' B
 #' is_sym(B)
 #' @export
 up2sym <- function(A,

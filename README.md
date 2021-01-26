@@ -1,7 +1,7 @@
 Matrix/Linear Algebra
 ================
 Ivan Jacob Agaloos Pesigan
-2021-01-19
+2021-01-26
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 <!-- badges: start -->
@@ -12,6 +12,10 @@ status](https://github.com/jeksterslab/matrixR/workflows/R-CMD-check/badge.svg?b
 status](https://travis-ci.com/jeksterslab/matrixR.svg?branch=master)](https://travis-ci.com/jeksterslab/matrixR)
 [![codecov](https://codecov.io/github/jeksterslab/matrixR/branch/master/graphs/badge.svg)](https://codecov.io/github/jeksterslab/matrixR)
 <!-- badges: end -->
+
+## Description
+
+A collection of functions related to Matrix/Linear Algebra.
 
 ## Installation
 

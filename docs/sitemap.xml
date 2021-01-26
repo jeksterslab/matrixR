@@ -37,7 +37,19 @@
     <loc>https://github.com/jeksterslab/matrixR//reference/matrixR.html</loc>
   </url>
   <url>
+    <loc>https://github.com/jeksterslab/matrixR//reference/ones.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/matrixR//reference/ones_from.html</loc>
+  </url>
+  <url>
     <loc>https://github.com/jeksterslab/matrixR//reference/up2sym.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/matrixR//reference/zeroes.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/matrixR//reference/zeroes_from.html</loc>
   </url>
   <url>
     <loc>https://github.com/jeksterslab/matrixR//articles/matrixR.html</loc>
@@ -74,5 +86,11 @@
   </url>
   <url>
     <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_loworup2sym.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_ones.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_zeroes.html</loc>
   </url>
 </urlset>

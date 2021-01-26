@@ -22,6 +22,10 @@ knitr::opts_chunk$set(
 [![codecov](https://codecov.io/github/jeksterslab/matrixR/branch/master/graphs/badge.svg)](https://codecov.io/github/jeksterslab/matrixR) 
 <!-- badges: end -->
 
+## Description
+
+A collection of functions related to Matrix/Linear Algebra.
+
 ## Installation
 
 You can install the released version of `matrixR` from [GitHub](https://github.com/jeksterslab/matrixR) with:

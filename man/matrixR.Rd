@@ -5,7 +5,7 @@
 \alias{matrixR}
 \title{matrixR: Matrix/Linear Algebra}
 \description{
-A collection of functions I use in studying
+A collection of functions related to
 Matrix/Linear Algebra.
 }
 \author{

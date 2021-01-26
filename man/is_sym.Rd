@@ -7,7 +7,7 @@
 is_sym(A, chk.num = TRUE)
 }
 \arguments{
-\item{A}{Numeric matrix.}
+\item{A}{Matrix.}
 
 \item{chk.num}{Logical.
 Check if the input matrix is numeric.}

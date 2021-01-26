@@ -131,6 +131,12 @@ of a square matrix." />
     <li>
       <a href="../articles/tests/test_loworup2sym.html">Test: low2sym and up2sym</a>
     </li>
+    <li>
+      <a href="../articles/tests/test_ones.html">Test: ones*</a>
+    </li>
+    <li>
+      <a href="../articles/tests/test_zeroes.html">Test: zeroes*</a>
+    </li>
   </ul>
 </li>
 <li>
@@ -174,7 +180,7 @@ of a square matrix.</p>
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>A</th>
-      <td><p>Numeric matrix.</p></td>
+      <td><p>Matrix.</p></td>
     </tr>
     <tr>
       <th>chk.num</th>
@@ -200,7 +206,12 @@ Check if the input matrix is numeric.</p></td>
 #&gt; [2,]   NA    3    5    8
 #&gt; [3,]   NA   NA    6    9
 #&gt; [4,]   NA   NA   NA   10</div><div class='input'><span class='va'>B</span> <span class='op'>&lt;-</span> <span class='fu'>up2sym</span><span class='op'>(</span><span class='va'>A</span><span class='op'>)</span>
-<span class='fu'><a href='is_sym.html'>is_sym</a></span><span class='op'>(</span><span class='va'>B</span><span class='op'>)</span>
+<span class='va'>B</span>
+</div><div class='output co'>#&gt;      [,1] [,2] [,3] [,4]
+#&gt; [1,]    1    2    4    7
+#&gt; [2,]    2    3    5    8
+#&gt; [3,]    4    5    6    9
+#&gt; [4,]    7    8    9   10</div><div class='input'><span class='fu'><a href='is_sym.html'>is_sym</a></span><span class='op'>(</span><span class='va'>B</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] TRUE</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

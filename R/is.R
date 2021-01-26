@@ -4,7 +4,7 @@
 #'
 #' @description Checks if a matrix is square \eqn{\left( \mathbf{A}_{m \times m} \right)} .
 #'
-#' @param A Numeric matrix.
+#' @param A Matrix.
 #' @param chk.num Logical.
 #'   Check if the input matrix is numeric.
 #' @examples
@@ -19,9 +19,9 @@
 #' )
 #' dim(B)
 #' # Returns TRUE
-#' is_sqr(B)
-#' # Returns FALSE
 #' is_sqr(A)
+#' # Returns FALSE
+#' is_sqr(B)
 #' @references
 #'   [Wikipedia: Square matrix](https://en.wikipedia.org/wiki/Square_matrix)
 #' @export

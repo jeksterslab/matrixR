@@ -7,7 +7,7 @@
 is_sing(A, tol = 1e-08)
 }
 \arguments{
-\item{A}{Numeric matrix.}
+\item{A}{Matrix.}
 
 \item{tol}{Numeric.
 Tolerance.}

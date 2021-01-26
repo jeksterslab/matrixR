@@ -3,7 +3,7 @@ title: "Matrix/Linear Algebra"
 author: "Ivan Jacob Agaloos Pesigan"
 date: "`r Sys.Date()`"
 description: >
-  Learn how to get started with the basics of `matrixR`.
+  A collection of functions related to Matrix/Linear Algebra.
 output:
   rmarkdown::html_vignette:
     toc: true
@@ -25,6 +25,10 @@ knitr::opts_chunk$set(
 [![Travis build status](https://travis-ci.com/jeksterslab/matrixR.svg?branch=master)](https://travis-ci.com/jeksterslab/matrixR)
 [![codecov](https://codecov.io/github/jeksterslab/matrixR/branch/master/graphs/badge.svg)](https://codecov.io/github/jeksterslab/matrixR) 
 <!-- badges: end -->
+
+## Description
+
+A collection of functions related to Matrix/Linear Algebra.
 
 ## Installation
 
