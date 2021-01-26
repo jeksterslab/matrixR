@@ -67,6 +67,10 @@ is_sym <- function(A,
   out <- FALSE
   if (is_sqr(A, chk.num)) {
     out <- sum(A == t(A)) == ((dim(A)[1])^2)
+  } else {
+    warning(
+      "Input is not a symmetric matrix."
+    )
   }
   return(out)
 }
@@ -98,6 +102,10 @@ is_posdef <- function(A,
   out <- FALSE
   if (is_sym(A)) {
     out <- !any(eigen(A, only.values = TRUE)$values < tol)
+  } else {
+    warning(
+      "Input is not a symmetric matrix."
+    )
   }
   return(out)
 }
@@ -129,6 +137,10 @@ is_inv <- function(A,
   out <- FALSE
   if (is_sqr(A)) {
     out <- !(det(A) < tol)
+  } else {
+    warning(
+      "Input is not a square matrix."
+    )
   }
   return(out)
 }
@@ -178,7 +190,7 @@ is_sing <- function(A,
 #' I
 #' is_diag(I)
 #' @references
-#' [Wikipedia: Diagonal matrix](https://en.wikipedia.org/wiki/Diagonal_matrix)
+#'   [Wikipedia: Diagonal matrix](https://en.wikipedia.org/wiki/Diagonal_matrix)
 #' @export
 is_diag <- function(A,
                     tol = 1e-8) {
@@ -189,22 +201,80 @@ is_diag <- function(A,
       length = dim(A)[1]
     )
     out <- sum(as.vector(A)) < tol
+  } else {
+    warning(
+      "Input is not a square matrix."
+    )
   }
   return(out)
 }
 
-# is_idempot <- function(A) {
-#  if (!is.numeric(A)) {
-#    stop(
-#      "`Input should be numeric."
-#    )
-#  }
-#  if (!is.matrix(A)) {
-#    stop(
-#      "Input should be of class `matrix`."
-#    )
-#  }
-#  return(
-#    all(crossprod(A) == A)
-#  )
-# }
+#' @author Ivan Jacob Agaloos Pesigan
+#'
+#' @title Is the Matrix Nilpotent?
+#'
+#' @description Checks if the input matrix is nilpotent.
+#'
+#' @details The square matrix \eqn{\mathbf{A}} is nilpotent
+#'   if all the eigenvalues of \eqn{\mathbf{A}} is zero.
+#'
+#' @inheritParams is_posdef
+#' @references
+#'   [Wikipedia: Nilpotent matrix](https://en.wikipedia.org/wiki/Nilpotent_matrix)
+#' @examples
+#' A <- zeroes(3, 3)
+#' A[1, ] <- c(0, 1, 1)
+#' is_nilpot(A)
+#' @export
+is_nilpot <- function(A,
+                      tol = 1e-8) {
+  out <- FALSE
+  if (is_sqr(A)) {
+    out <- all(
+      abs(
+        eigen(A, only.values = TRUE)$values
+      ) < tol
+    )
+  } else {
+    warning(
+      "Input is not a square matrix."
+    )
+  }
+  return(out)
+}
+
+#' @author Ivan Jacob Agaloos Pesigan
+#'
+#' @title Is the Matrix Idempotent?
+#'
+#' @description Checks if the input matrix is idempotent.
+#'
+#' @details The square matrix \eqn{\mathbf{A}} is idempotent
+#'   if \eqn{\mathbf{A}^2 = \mathbf{A}}
+#'
+#' @inheritParams is_posdef
+#' @references
+#'   [Wikipedia: Nilpotent matrix](https://en.wikipedia.org/wiki/Idempotent_matrix)
+#' @examples
+#' A <- matrix(
+#'   data = c(
+#'     1, 0, 0, 1
+#'   ),
+#'   ncol = 2
+#' )
+#' is_idempot(A)
+#' @export
+is_idempot <- function(A,
+                       tol = 1e-8) {
+  out <- FALSE
+  if (is_sqr(A)) {
+    out <- all(
+      sum(A %*% A - A) < tol
+    )
+  } else {
+    warning(
+      "Input is not a square matrix."
+    )
+  }
+  return(out)
+}
