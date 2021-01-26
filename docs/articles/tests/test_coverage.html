@@ -72,7 +72,13 @@
       <a href="../../articles/tests/test_is_diag.html">Test: is_diag</a>
     </li>
     <li>
+      <a href="../../articles/tests/test_is_idempot.html">Test: is_idempot</a>
+    </li>
+    <li>
       <a href="../../articles/tests/test_is_inv.html">Test: is_inv</a>
+    </li>
+    <li>
+      <a href="../../articles/tests/test_is_nilpot.html">Test: is_nilpot</a>
     </li>
     <li>
       <a href="../../articles/tests/test_is_posdef.html">Test: is_posdef</a>
@@ -124,7 +130,7 @@
       <h1 data-toc-skip>Test: Coverage</h1>
                         <h4 class="author">Ivan Jacob Agaloos Pesigan</h4>
             
-            <h4 class="date">2021-01-26</h4>
+            <h4 class="date">2021-01-27</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/jeksterslab/matrixR/blob/master/vignettes/tests/test_coverage.Rmd"><code>vignettes/tests/test_coverage.Rmd</code></a></small>
       <div class="hidden name"><code>test_coverage.Rmd</code></div>
@@ -172,8 +178,49 @@
   <span class="fu"><a href="https://testthat.r-lib.org/reference/expect_error.html">expect_error</a></span><span class="op">(</span>
     <span class="fu"><a href="../../reference/ones_from.html">ones_from</a></span><span class="op">(</span><span class="va">A</span><span class="op">)</span>
   <span class="op">)</span>
+  <span class="fu"><a href="https://testthat.r-lib.org/reference/logical-expectations.html">expect_false</a></span><span class="op">(</span>
+    <span class="fu"><a href="../../reference/is_nilpot.html">is_nilpot</a></span><span class="op">(</span><span class="va">A</span><span class="op">)</span>
+  <span class="op">)</span>
+  <span class="fu"><a href="https://testthat.r-lib.org/reference/logical-expectations.html">expect_false</a></span><span class="op">(</span>
+    <span class="fu"><a href="../../reference/is_idempot.html">is_idempot</a></span><span class="op">(</span><span class="va">A</span><span class="op">)</span>
+  <span class="op">)</span>
 <span class="op">}</span><span class="op">)</span>
-<span class="co">#&gt; Test passed 🥇</span>
+<span class="co">#&gt; ── Warning (&lt;text&gt;:9:3): nonsquare matrix ──────────────────────────────────────</span>
+<span class="co">#&gt; Input is not a symmetric matrix.</span>
+<span class="co">#&gt; Backtrace:</span>
+<span class="co">#&gt;  1. testthat::expect_false(is_posdef(A))</span>
+<span class="co">#&gt;  4. matrixR::is_posdef(A)</span>
+<span class="co">#&gt;  5. matrixR::is_sym(A)</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; ── Warning (&lt;text&gt;:9:3): nonsquare matrix ──────────────────────────────────────</span>
+<span class="co">#&gt; Input is not a symmetric matrix.</span>
+<span class="co">#&gt; Backtrace:</span>
+<span class="co">#&gt;  1. testthat::expect_false(is_posdef(A))</span>
+<span class="co">#&gt;  4. matrixR::is_posdef(A)</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; ── Warning (&lt;text&gt;:12:3): nonsquare matrix ─────────────────────────────────────</span>
+<span class="co">#&gt; Input is not a square matrix.</span>
+<span class="co">#&gt; Backtrace:</span>
+<span class="co">#&gt;  1. testthat::expect_false(is_inv(A))</span>
+<span class="co">#&gt;  4. matrixR::is_inv(A)</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; ── Warning (&lt;text&gt;:15:3): nonsquare matrix ─────────────────────────────────────</span>
+<span class="co">#&gt; Input is not a square matrix.</span>
+<span class="co">#&gt; Backtrace:</span>
+<span class="co">#&gt;  1. testthat::expect_false(is_diag(A))</span>
+<span class="co">#&gt;  4. matrixR::is_diag(A)</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; ── Warning (&lt;text&gt;:30:3): nonsquare matrix ─────────────────────────────────────</span>
+<span class="co">#&gt; Input is not a square matrix.</span>
+<span class="co">#&gt; Backtrace:</span>
+<span class="co">#&gt;  1. testthat::expect_false(is_nilpot(A))</span>
+<span class="co">#&gt;  4. matrixR::is_nilpot(A)</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; ── Warning (&lt;text&gt;:33:3): nonsquare matrix ─────────────────────────────────────</span>
+<span class="co">#&gt; Input is not a square matrix.</span>
+<span class="co">#&gt; Backtrace:</span>
+<span class="co">#&gt;  1. testthat::expect_false(is_idempot(A))</span>
+<span class="co">#&gt;  4. matrixR::is_idempot(A)</span>
 <span class="va">B</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>
   data <span class="op">=</span> <span class="st">"text"</span>,
   nrow <span class="op">=</span> <span class="fl">2</span>,
@@ -191,7 +238,7 @@
     <span class="fu"><a href="../../reference/is_sqr.html">is_sqr</a></span><span class="op">(</span><span class="va">C</span><span class="op">)</span>
   <span class="op">)</span>
 <span class="op">}</span><span class="op">)</span>
-<span class="co">#&gt; Test passed 🎊</span>
+<span class="co">#&gt; Test passed 😸</span>
 <span class="va">D</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>
   data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">1</span><span class="op">)</span>,
   ncol <span class="op">=</span> <span class="fl">2</span>
@@ -202,13 +249,13 @@
     <span class="fu"><a href="../../reference/cor2cov.html">cor2cov</a></span><span class="op">(</span><span class="va">D</span>, <span class="va">v</span><span class="op">)</span>
   <span class="op">)</span>
 <span class="op">}</span><span class="op">)</span>
-<span class="co">#&gt; Test passed 😀</span>
+<span class="co">#&gt; Test passed 🥇</span>
 <span class="fu"><a href="https://testthat.r-lib.org/reference/test_that.html">test_that</a></span><span class="op">(</span><span class="st">"cov2cor - is_posdef"</span>, <span class="op">{</span>
   <span class="fu"><a href="https://testthat.r-lib.org/reference/expect_error.html">expect_error</a></span><span class="op">(</span>
     <span class="fu"><a href="../../reference/cov2cor.html">cov2cor</a></span><span class="op">(</span><span class="va">D</span><span class="op">)</span>
   <span class="op">)</span>
 <span class="op">}</span><span class="op">)</span>
-<span class="co">#&gt; Test passed 😀</span>
+<span class="co">#&gt; Test passed 🌈</span>
 <span class="va">E</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>
   data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>
     <span class="fl">1</span>,
@@ -224,7 +271,7 @@
     <span class="fu"><a href="../../reference/cor2cov.html">cor2cov</a></span><span class="op">(</span><span class="va">E</span>, <span class="va">u</span><span class="op">)</span>
   <span class="op">)</span>
 <span class="op">}</span><span class="op">)</span>
-<span class="co">#&gt; Test passed 🎊</span></code></pre></div>
+<span class="co">#&gt; Test passed 😀</span></code></pre></div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

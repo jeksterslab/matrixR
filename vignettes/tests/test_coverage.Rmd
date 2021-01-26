@@ -59,6 +59,12 @@ test_that("nonsquare matrix", {
   expect_error(
     ones_from(A)
   )
+  expect_false(
+    is_nilpot(A)
+  )
+  expect_false(
+    is_idempot(A)
+  )
 })
 B <- matrix(
   data = "text",

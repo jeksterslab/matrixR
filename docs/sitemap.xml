@@ -16,7 +16,13 @@
     <loc>https://github.com/jeksterslab/matrixR//reference/is_diag.html</loc>
   </url>
   <url>
+    <loc>https://github.com/jeksterslab/matrixR//reference/is_idempot.html</loc>
+  </url>
+  <url>
     <loc>https://github.com/jeksterslab/matrixR//reference/is_inv.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/matrixR//reference/is_nilpot.html</loc>
   </url>
   <url>
     <loc>https://github.com/jeksterslab/matrixR//reference/is_posdef.html</loc>
@@ -70,7 +76,13 @@
     <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_is_diag.html</loc>
   </url>
   <url>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_is_idempot.html</loc>
+  </url>
+  <url>
     <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_is_inv.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_is_nilpot.html</loc>
   </url>
   <url>
     <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_is_posdef.html</loc>

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Articles • matrixR</title>
+<title>Is the Matrix Idempotent? — is_idempot • matrixR</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Articles" />
+<meta property="og:title" content="Is the Matrix Idempotent? — is_idempot" />
+<meta property="og:description" content="Checks if the input matrix is idempotent." />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-article-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -167,48 +168,56 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Articles</h1>
+    <h1>Is the Matrix Idempotent?</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jeksterslab/matrixR/blob/master/R/is.R'><code>R/is.R</code></a></small>
+    <div class="hidden name"><code>is_idempot.Rd</code></div>
     </div>
 
-    <div class="section ">
-      <h3>All vignettes</h3>
-      <p class="section-desc"></p>
-
-      <dl>
-        <dt><a href="matrixR.html">Matrix/Linear Algebra</a></dt>
-        <dd><p>A collection of functions related to Matrix/Linear Algebra.</p></dt>
-        <dt><a href="tests/test_LS.html">Test: LS</a></dt>
-        <dd></dt>
-        <dt><a href="tests/test_cor2cov.html">Test: cor2cov</a></dt>
-        <dd></dt>
-        <dt><a href="tests/test_cov2cor.html">Test: cov2cor</a></dt>
-        <dd></dt>
-        <dt><a href="tests/test_coverage.html">Test: Coverage</a></dt>
-        <dd></dt>
-        <dt><a href="tests/test_is_diag.html">Test: is_diag</a></dt>
-        <dd></dt>
-        <dt><a href="tests/test_is_idempot.html">Test: is_idempot</a></dt>
-        <dd></dt>
-        <dt><a href="tests/test_is_inv.html">Test: is_inv</a></dt>
-        <dd></dt>
-        <dt><a href="tests/test_is_nilpot.html">Test: is_nilpot</a></dt>
-        <dd></dt>
-        <dt><a href="tests/test_is_posdef.html">Test: is_posdef</a></dt>
-        <dd></dt>
-        <dt><a href="tests/test_is_sing.html">Test: is_sing</a></dt>
-        <dd></dt>
-        <dt><a href="tests/test_is_sqr.html">Test: is_sqr</a></dt>
-        <dd></dt>
-        <dt><a href="tests/test_is_sym.html">Test: is_sym</a></dt>
-        <dd></dt>
-        <dt><a href="tests/test_loworup2sym.html">Test: low2sym and up2sym</a></dt>
-        <dd></dt>
-        <dt><a href="tests/test_ones.html">Test: ones*</a></dt>
-        <dd></dt>
-        <dt><a href="tests/test_zeroes.html">Test: zeroes*</a></dt>
-        <dd></dt>
-      </dl>
+    <div class="ref-description">
+    <p>Checks if the input matrix is idempotent.</p>
     </div>
+
+    <pre class="usage"><span class='fu'>is_idempot</span><span class='op'>(</span><span class='va'>A</span>, tol <span class='op'>=</span> <span class='fl'>1e-08</span><span class='op'>)</span></pre>
+
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>A</th>
+      <td><p>Matrix.</p></td>
+    </tr>
+    <tr>
+      <th>tol</th>
+      <td><p>Numeric.
+Tolerance.</p></td>
+    </tr>
+    </table>
+
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>The square matrix \(\mathbf{A}\) is idempotent
+if \(\mathbf{A}^2 = \mathbf{A}\)</p>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p><a href='https://en.wikipedia.org/wiki/Idempotent_matrix'>Wikipedia: Nilpotent matrix</a></p>
+    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
+
+    <p>Ivan Jacob Agaloos Pesigan</p>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='va'>A</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span>
+  data <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span>
+    <span class='fl'>1</span>, <span class='fl'>0</span>, <span class='fl'>0</span>, <span class='fl'>1</span>
+  <span class='op'>)</span>,
+  ncol <span class='op'>=</span> <span class='fl'>2</span>
+<span class='op'>)</span>
+<span class='fu'>is_idempot</span><span class='op'>(</span><span class='va'>A</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] TRUE</div></pre>
+  </div>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 

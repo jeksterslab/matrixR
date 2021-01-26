@@ -72,7 +72,13 @@
       <a href="../../articles/tests/test_is_diag.html">Test: is_diag</a>
     </li>
     <li>
+      <a href="../../articles/tests/test_is_idempot.html">Test: is_idempot</a>
+    </li>
+    <li>
       <a href="../../articles/tests/test_is_inv.html">Test: is_inv</a>
+    </li>
+    <li>
+      <a href="../../articles/tests/test_is_nilpot.html">Test: is_nilpot</a>
     </li>
     <li>
       <a href="../../articles/tests/test_is_posdef.html">Test: is_posdef</a>
@@ -124,7 +130,7 @@
       <h1 data-toc-skip>Test: is_sym</h1>
                         <h4 class="author">Ivan Jacob Agaloos Pesigan</h4>
             
-            <h4 class="date">2021-01-26</h4>
+            <h4 class="date">2021-01-27</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/jeksterslab/matrixR/blob/master/vignettes/tests/test_is_sym.Rmd"><code>vignettes/tests/test_is_sym.Rmd</code></a></small>
       <div class="hidden name"><code>test_is_sym.Rmd</code></div>
@@ -292,7 +298,8 @@
     <span class="op">)</span>
   <span class="op">)</span>,
   row.names <span class="op">=</span> <span class="cn">FALSE</span>
-<span class="op">)</span></code></pre></div>
+<span class="op">)</span>
+<span class="co">#&gt; Warning in is_sym(matrix_F1): Input is not a symmetric matrix.</span></code></pre></div>
 <table class="table">
 <thead><tr class="header">
 <th align="left">Item</th>
@@ -327,7 +334,7 @@
     <span class="fu"><a href="../../reference/is_sym.html">is_sym</a></span><span class="op">(</span><span class="va">matrix_T</span><span class="op">)</span>
   <span class="op">)</span>
 <span class="op">}</span><span class="op">)</span>
-<span class="co">#&gt; Test passed 🥇</span></code></pre></div>
+<span class="co">#&gt; Test passed 🌈</span></code></pre></div>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://testthat.r-lib.org/reference/test_that.html">test_that</a></span><span class="op">(</span><span class="st">"is_sym is FALSE"</span>, <span class="op">{</span>
   <span class="fu"><a href="https://testthat.r-lib.org/reference/logical-expectations.html">expect_false</a></span><span class="op">(</span>
@@ -335,7 +342,11 @@
     <span class="fu"><a href="../../reference/is_sym.html">is_sym</a></span><span class="op">(</span><span class="va">matrix_F2</span><span class="op">)</span>
   <span class="op">)</span>
 <span class="op">}</span><span class="op">)</span>
-<span class="co">#&gt; Test passed 🥳</span></code></pre></div>
+<span class="co">#&gt; ── Warning (&lt;text&gt;:2:3): is_sym is FALSE ───────────────────────────────────────</span>
+<span class="co">#&gt; Input is not a symmetric matrix.</span>
+<span class="co">#&gt; Backtrace:</span>
+<span class="co">#&gt;  1. testthat::expect_false(is_sym(matrix_F1), is_sym(matrix_F2))</span>
+<span class="co">#&gt;  4. matrixR::is_sym(matrix_F1)</span></code></pre></div>
 </div>
   </div>
 

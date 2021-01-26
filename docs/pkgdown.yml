@@ -8,7 +8,9 @@ articles:
   tests/test_cov2cor: test_cov2cor.html
   tests/test_coverage: test_coverage.html
   tests/test_is_diag: test_is_diag.html
+  tests/test_is_idempot: test_is_idempot.html
   tests/test_is_inv: test_is_inv.html
+  tests/test_is_nilpot: test_is_nilpot.html
   tests/test_is_posdef: test_is_posdef.html
   tests/test_is_sing: test_is_sing.html
   tests/test_is_sqr: test_is_sqr.html
@@ -16,7 +18,7 @@ articles:
   tests/test_loworup2sym: test_loworup2sym.html
   tests/test_ones: test_ones.html
   tests/test_zeroes: test_zeroes.html
-last_built: 2021-01-26T14:52Z
+last_built: 2021-01-26T17:39Z
 urls:
   reference: https://github.com/jeksterslab/matrixR//reference
   article: https://github.com/jeksterslab/matrixR//articles
