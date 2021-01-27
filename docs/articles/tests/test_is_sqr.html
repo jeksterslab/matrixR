@@ -57,13 +57,13 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
+      <a href="../../articles/tests/test_Cor2Cov.html">Test: Cor2Cov</a>
+    </li>
+    <li>
+      <a href="../../articles/tests/test_Cov2Cor.html">Test: Cov2Cor</a>
+    </li>
+    <li>
       <a href="../../articles/tests/test_LS.html">Test: LS</a>
-    </li>
-    <li>
-      <a href="../../articles/tests/test_cor2cov.html">Test: cor2cov</a>
-    </li>
-    <li>
-      <a href="../../articles/tests/test_cov2cor.html">Test: cov2cor</a>
     </li>
     <li>
       <a href="../../articles/tests/test_coverage.html">Test: Coverage</a>
@@ -100,6 +100,9 @@
     </li>
     <li>
       <a href="../../articles/tests/test_pow.html">Test: pow</a>
+    </li>
+    <li>
+      <a href="../../articles/tests/test_tr.html">Test: tr</a>
     </li>
     <li>
       <a href="../../articles/tests/test_zeroes.html">Test: zeroes*</a>
@@ -145,11 +148,6 @@
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://testthat.r-lib.org">testthat</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/jeksterslab/matrixR">matrixR</a></span><span class="op">)</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Attaching package: 'matrixR'</span>
-<span class="co">#&gt; The following object is masked from 'package:stats':</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;     cov2cor</span>
 <span class="fu"><a href="https://testthat.r-lib.org/reference/context.html">context</a></span><span class="op">(</span><span class="st">"Test is_sqr."</span><span class="op">)</span></code></pre></div>
 <div id="parameters" class="section level2">
 <h2 class="hasAnchor">
@@ -293,14 +291,14 @@
     <span class="fu"><a href="../../reference/is_sqr.html">is_sqr</a></span><span class="op">(</span><span class="va">matrix_T</span><span class="op">)</span>
   <span class="op">)</span>
 <span class="op">}</span><span class="op">)</span>
-<span class="co">#&gt; Test passed 🥇</span></code></pre></div>
+<span class="co">#&gt; Test passed 😀</span></code></pre></div>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://testthat.r-lib.org/reference/test_that.html">test_that</a></span><span class="op">(</span><span class="st">"is_sqr is FALSE"</span>, <span class="op">{</span>
   <span class="fu"><a href="https://testthat.r-lib.org/reference/logical-expectations.html">expect_false</a></span><span class="op">(</span>
     <span class="fu"><a href="../../reference/is_sqr.html">is_sqr</a></span><span class="op">(</span><span class="va">matrix_F</span><span class="op">)</span>
   <span class="op">)</span>
 <span class="op">}</span><span class="op">)</span>
-<span class="co">#&gt; Test passed 🎉</span></code></pre></div>
+<span class="co">#&gt; Test passed 🥳</span></code></pre></div>
 </div>
   </div>
 

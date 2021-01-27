@@ -13,7 +13,14 @@ is_sqr(A, chk.num = TRUE)
 Check if the input matrix is numeric.}
 }
 \description{
-Checks if a matrix is square \eqn{\left( \mathbf{A}_{m \times m} \right)} .
+Checks if the dimensions of a matrix are identical.
+}
+\details{
+\deqn{
+    \left(
+      \mathbf{A}_{m \times m}
+    \right)
+  }
 }
 \examples{
 A <- matrix(
@@ -34,6 +41,18 @@ is_sqr(B)
 \references{
 \href{https://en.wikipedia.org/wiki/Square_matrix}{Wikipedia: Square matrix}
 }
+\seealso{
+Other is functions: 
+\code{\link{is_diag}()},
+\code{\link{is_idempot}()},
+\code{\link{is_inv}()},
+\code{\link{is_nilpot}()},
+\code{\link{is_posdef}()},
+\code{\link{is_sing}()},
+\code{\link{is_sym}()}
+}
 \author{
 Ivan Jacob Agaloos Pesigan
 }
+\concept{is functions}
+\keyword{is}

@@ -27,6 +27,8 @@
 #'     \mathbf{b}
 #'   }
 #'
+#' @family solve functions
+#' @keywords solve
 #' @param A `m by n` numeric matrix.
 #' @param b Numeric vector of length `m` or `m by 1` matrix.
 #' @examples

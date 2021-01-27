@@ -69,14 +69,14 @@ knitr::kable(
 #'
 #' ## testthat
 #'
-#+ testthat_01, echo=TRUE
+#+ testthat_01
 test_that("is_sing is TRUE", {
   expect_true(
     is_sing(matrix_T)
   )
 })
 #'
-#+ testthat_02, echo=TRUE
+#+ testthat_02
 test_that("is_sing is FALSE", {
   expect_false(
     is_sing(matrix_F)

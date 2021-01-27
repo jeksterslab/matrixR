@@ -68,14 +68,14 @@ knitr::kable(
 #'
 #' ## testthat
 #'
-#+ testthat_01, echo=TRUE
+#+ testthat_01
 test_that("is_posdef is TRUE", {
   expect_true(
     is_posdef(matrix_T)
   )
 })
 #'
-#+ testthat_02, echo=TRUE
+#+ testthat_02
 test_that("is_posdef is FALSE", {
   expect_false(
     is_posdef(matrix_F)

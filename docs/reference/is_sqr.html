@@ -40,7 +40,7 @@
 
 
 <meta property="og:title" content="Is the Matrix Square? — is_sqr" />
-<meta property="og:description" content="Checks if a matrix is square \(\left( \mathbf{A}_{m \times m} \right)\) ." />
+<meta property="og:description" content="Checks if the dimensions of a matrix are identical." />
 
 
 
@@ -98,13 +98,13 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
+      <a href="../articles/tests/test_Cor2Cov.html">Test: Cor2Cov</a>
+    </li>
+    <li>
+      <a href="../articles/tests/test_Cov2Cor.html">Test: Cov2Cor</a>
+    </li>
+    <li>
       <a href="../articles/tests/test_LS.html">Test: LS</a>
-    </li>
-    <li>
-      <a href="../articles/tests/test_cor2cov.html">Test: cor2cov</a>
-    </li>
-    <li>
-      <a href="../articles/tests/test_cov2cor.html">Test: cov2cor</a>
     </li>
     <li>
       <a href="../articles/tests/test_coverage.html">Test: Coverage</a>
@@ -143,6 +143,9 @@
       <a href="../articles/tests/test_pow.html">Test: pow</a>
     </li>
     <li>
+      <a href="../articles/tests/test_tr.html">Test: tr</a>
+    </li>
+    <li>
       <a href="../articles/tests/test_zeroes.html">Test: zeroes*</a>
     </li>
   </ul>
@@ -177,7 +180,7 @@
     </div>
 
     <div class="ref-description">
-    <p>Checks if a matrix is square \(\left( \mathbf{A}_{m \times m} \right)\) .</p>
+    <p>Checks if the dimensions of a matrix are identical.</p>
     </div>
 
     <pre class="usage"><span class='fu'>is_sqr</span><span class='op'>(</span><span class='va'>A</span>, chk.num <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></pre>
@@ -196,9 +199,26 @@ Check if the input matrix is numeric.</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>$$
+    \left(
+      \mathbf{A}_{m \times m}
+    \right)
+  $$</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p><a href='https://en.wikipedia.org/wiki/Square_matrix'>Wikipedia: Square matrix</a></p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Other is functions: 
+<code><a href='is_diag.html'>is_diag</a>()</code>,
+<code><a href='is_idempot.html'>is_idempot</a>()</code>,
+<code><a href='is_inv.html'>is_inv</a>()</code>,
+<code><a href='is_nilpot.html'>is_nilpot</a>()</code>,
+<code><a href='is_posdef.html'>is_posdef</a>()</code>,
+<code><a href='is_sing.html'>is_sing</a>()</code>,
+<code><a href='is_sym.html'>is_sym</a>()</code></p></div>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
     <p>Ivan Jacob Agaloos Pesigan</p>

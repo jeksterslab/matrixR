@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Correlation to Covariance — cor2cov • matrixR</title>
+<title>Correlation to Covariance — Cor2Cov • matrixR</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,7 @@
 
 
 
-<meta property="og:title" content="Correlation to Covariance — cor2cov" />
+<meta property="og:title" content="Correlation to Covariance — Cor2Cov" />
 <meta property="og:description" content="Converts a correlation matrix to a covariance matrix." />
 
 
@@ -98,13 +98,13 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
+      <a href="../articles/tests/test_Cor2Cov.html">Test: Cor2Cov</a>
+    </li>
+    <li>
+      <a href="../articles/tests/test_Cov2Cor.html">Test: Cov2Cor</a>
+    </li>
+    <li>
       <a href="../articles/tests/test_LS.html">Test: LS</a>
-    </li>
-    <li>
-      <a href="../articles/tests/test_cor2cov.html">Test: cor2cov</a>
-    </li>
-    <li>
-      <a href="../articles/tests/test_cov2cor.html">Test: cov2cor</a>
     </li>
     <li>
       <a href="../articles/tests/test_coverage.html">Test: Coverage</a>
@@ -143,6 +143,9 @@
       <a href="../articles/tests/test_pow.html">Test: pow</a>
     </li>
     <li>
+      <a href="../articles/tests/test_tr.html">Test: tr</a>
+    </li>
+    <li>
       <a href="../articles/tests/test_zeroes.html">Test: zeroes*</a>
     </li>
   </ul>
@@ -172,15 +175,15 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Correlation to Covariance</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jeksterslab/matrixR/blob/master/R/convert.R'><code>R/convert.R</code></a></small>
-    <div class="hidden name"><code>cor2cov.Rd</code></div>
+    <small class="dont-index">Source: <a href='https://github.com/jeksterslab/matrixR/blob/master/R/conversion.R'><code>R/conversion.R</code></a></small>
+    <div class="hidden name"><code>Cor2Cov.Rd</code></div>
     </div>
 
     <div class="ref-description">
     <p>Converts a correlation matrix to a covariance matrix.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>cor2cov</span><span class='op'>(</span><span class='va'>A</span>, <span class='va'>v</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>Cor2Cov</span><span class='op'>(</span><span class='va'>A</span>, <span class='va'>v</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -220,6 +223,12 @@ A vector of \(p \times 1\) standard deviations.</p></td>
 <li><p>\(\mathbf{v}_{p \times 1}\) is a vector of standard deviations.</p></li>
 </ul>
 
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Other conversion functions: 
+<code><a href='Cov2Cor.html'>Cov2Cor</a>()</code>,
+<code><a href='low2sym.html'>low2sym</a>()</code>,
+<code><a href='up2sym.html'>up2sym</a>()</code></p></div>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
     <p>Ivan Jacob Agaloos Pesigan</p>
@@ -240,7 +249,7 @@ A vector of \(p \times 1\) standard deviations.</p></td>
 #&gt; [1,] 225.0000 114.7279  58.5000
 #&gt; [2,] 114.7279 225.0000 114.7279
 #&gt; [3,]  58.5000 114.7279 225.0000</div><div class='input'>
-<span class='fu'>cor2cov</span><span class='op'>(</span><span class='va'>A</span>, <span class='va'>v</span><span class='op'>)</span>
+<span class='fu'>Cor2Cov</span><span class='op'>(</span><span class='va'>A</span>, <span class='va'>v</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;          [,1]     [,2]     [,3]
 #&gt; [1,] 225.0000 114.7279  58.5000
 #&gt; [2,] 114.7279 225.0000 114.7279

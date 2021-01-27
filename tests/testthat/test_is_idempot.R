@@ -128,7 +128,7 @@ knitr::kable(
 #'
 #' ## testthat
 #'
-#+ testthat_01, echo=TRUE
+#+ testthat_01
 test_that("is_idempot is TRUE", {
   expect_true(
     is_idempot(matrix_T_1)
@@ -144,7 +144,7 @@ test_that("is_idempot is TRUE", {
   )
 })
 #'
-#+ testthat_02, echo=TRUE
+#+ testthat_02
 test_that("is_idempot is FALSE", {
   expect_false(
     is_idempot(matrix_F)

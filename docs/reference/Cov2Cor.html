@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Identity Matrix from Dimensions of Another Square Matrix — ones_from • matrixR</title>
+<title>Covariance to Correlation — Cov2Cor • matrixR</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Identity Matrix from Dimensions of Another Square Matrix — ones_from" />
-<meta property="og:description" content="Generates an indentity matrix using the dimensions of another square matrix." />
+<meta property="og:title" content="Covariance to Correlation — Cov2Cor" />
+<meta property="og:description" content="Converts a covariance matrix to a correlation matrix." />
 
 
 
@@ -174,47 +174,81 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Identity Matrix from Dimensions of Another Square Matrix</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jeksterslab/matrixR/blob/master/R/ones.R'><code>R/ones.R</code></a></small>
-    <div class="hidden name"><code>ones_from.Rd</code></div>
+    <h1>Covariance to Correlation</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jeksterslab/matrixR/blob/master/R/conversion.R'><code>R/conversion.R</code></a></small>
+    <div class="hidden name"><code>Cov2Cor.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Generates an indentity matrix using the dimensions of another square matrix.</p>
+    <p>Converts a covariance matrix to a correlation matrix.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>ones_from</span><span class='op'>(</span><span class='va'>A</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>Cov2Cor</span><span class='op'>(</span><span class='va'>A</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>A</th>
-      <td><p>Matrix.</p></td>
+      <td><p>Numeric matrix.
+A \(p \times p\) positive definite covariance matrix.</p></td>
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p><a href='https://en.wikipedia.org/wiki/Identity_matrix'>Wikipedia: Identity matrix</a></p>
+    <p>Returns a correlation matrix.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>The correlation matrix is given by</p>
+<p>$$
+    \left(
+      \mathbf{v}
+      \mathbf{I}
+    \right)^{-1}
+    \mathbf{A}
+    \left(
+      \mathbf{v}
+      \mathbf{I}
+    \right)^{-1}
+  $$</p>
+<p>where</p><ul>
+<li><p>\(\mathbf{A}_{p \times p}\) is a covariance matrix,</p></li>
+<li><p>\(\mathbf{I}_{p \times p}\) is an identity matrix,</p></li>
+<li><p>\(\mathbf{v}_{p \times 1}\) is a vector of standard deviations,
+that is, the square root of the diagonal elements of \(\mathbf{A}\).</p></li>
+</ul>
+
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other ones functions: 
-<code><a href='ones.html'>ones</a>()</code></p></div>
+    <div class='dont-index'><p>Other conversion functions: 
+<code><a href='Cor2Cov.html'>Cor2Cov</a>()</code>,
+<code><a href='low2sym.html'>low2sym</a>()</code>,
+<code><a href='up2sym.html'>up2sym</a>()</code></p></div>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
     <p>Ivan Jacob Agaloos Pesigan</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='va'>A</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span>
-  data <span class='op'>=</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>9</span>,
+  data <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span>
+    <span class='fl'>225.0000</span>, <span class='fl'>114.7279</span>, <span class='fl'>58.5000</span>,
+    <span class='fl'>114.7279</span>, <span class='fl'>225.0000</span>, <span class='fl'>114.7279</span>,
+    <span class='fl'>58.5000</span>, <span class='fl'>114.7279</span>, <span class='fl'>225.0000</span>
+  <span class='op'>)</span>,
   ncol <span class='op'>=</span> <span class='fl'>3</span>
 <span class='op'>)</span>
-<span class='fu'>ones_from</span><span class='op'>(</span><span class='va'>A</span><span class='op'>)</span>
-</div><div class='output co'>#&gt;      [,1] [,2] [,3]
-#&gt; [1,]    1    0    0
-#&gt; [2,]    0    1    0
-#&gt; [3,]    0    0    1</div></pre>
+
+<span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>cov2cor</a></span><span class='op'>(</span><span class='va'>A</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;           [,1]      [,2]      [,3]
+#&gt; [1,] 1.0000000 0.5099018 0.2600000
+#&gt; [2,] 0.5099018 1.0000000 0.5099018
+#&gt; [3,] 0.2600000 0.5099018 1.0000000</div><div class='input'>
+<span class='fu'>Cov2Cor</span><span class='op'>(</span><span class='va'>A</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;           [,1]      [,2]      [,3]
+#&gt; [1,] 1.0000000 0.5099018 0.2600000
+#&gt; [2,] 0.5099018 1.0000000 0.5099018
+#&gt; [3,] 0.2600000 0.5099018 1.0000000</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

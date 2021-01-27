@@ -15,6 +15,10 @@ Tolerance.}
 \description{
 Checks if a square matrix is noninvertible or singular.
 }
+\details{
+An \eqn{n \times n} matrix \eqn{\mathbf{A}} is singular
+if its determinant is zero.
+}
 \examples{
 Sigma <- matrix(
   data = c(
@@ -31,6 +35,18 @@ is_sing(Sigma)
 
 \href{https://en.wikipedia.org/wiki/Singular_matrix}{Wikipedia: Singular Matrix}
 }
+\seealso{
+Other is functions: 
+\code{\link{is_diag}()},
+\code{\link{is_idempot}()},
+\code{\link{is_inv}()},
+\code{\link{is_nilpot}()},
+\code{\link{is_posdef}()},
+\code{\link{is_sqr}()},
+\code{\link{is_sym}()}
+}
 \author{
 Ivan Jacob Agaloos Pesigan
 }
+\concept{is functions}
+\keyword{is}

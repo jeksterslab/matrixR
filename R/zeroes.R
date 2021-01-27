@@ -1,53 +1,11 @@
 #' @author Ivan Jacob Agaloos Pesigan
 #'
-#' @title Identity Matrix
-#'
-#' @description Generates an indentity matrix.
-#'
-#' @param n Integer. Size.
-#' @examples
-#' ones(3)
-#' @references
-#'   [Wikipedia: Identity matrix](https://en.wikipedia.org/wiki/Identity_matrix)
-#' @export
-ones <- function(n) {
-  return(
-    diag(n)
-  )
-}
-
-#' @author Ivan Jacob Agaloos Pesigan
-#'
-#' @title Identity Matrix from Dimensions of Another Square Matrix
-#'
-#' @description Generates an indentity matrix using the dimensions of another square matrix.
-#'
-#' @inheritParams is_sqr
-#' @inherit ones references
-#' @examples
-#' A <- matrix(
-#'   data = 1:9,
-#'   ncol = 3
-#' )
-#' ones_from(A)
-#' @export
-ones_from <- function(A) {
-  if (!is_sqr(A, chk.num = FALSE)) {
-    stop(
-      "`Input should be a square matrix."
-    )
-  }
-  return(
-    ones(dim(A)[1])
-  )
-}
-
-#' @author Ivan Jacob Agaloos Pesigan
-#'
 #' @title Zero Matrix
 #'
 #' @description Generates a zero matrix.
 #'
+#' @family zeroes functions
+#' @keywords zeroes
 #' @param m Integer. Number of rows.
 #' @param n Integer. Number of columns.
 #' @examples
@@ -72,6 +30,8 @@ zeroes <- function(m,
 #'
 #' @description Generates a zero matrix using the dimensions of another matrix.
 #'
+#' @family zeroes functions
+#' @keywords zeroes
 #' @inheritParams is_sqr
 #' @inherit zeroes references
 #' @examples

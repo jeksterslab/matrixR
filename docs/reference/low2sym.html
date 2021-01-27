@@ -99,13 +99,13 @@ of a square matrix." />
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
+      <a href="../articles/tests/test_Cor2Cov.html">Test: Cor2Cov</a>
+    </li>
+    <li>
+      <a href="../articles/tests/test_Cov2Cor.html">Test: Cov2Cor</a>
+    </li>
+    <li>
       <a href="../articles/tests/test_LS.html">Test: LS</a>
-    </li>
-    <li>
-      <a href="../articles/tests/test_cor2cov.html">Test: cor2cov</a>
-    </li>
-    <li>
-      <a href="../articles/tests/test_cov2cor.html">Test: cov2cor</a>
     </li>
     <li>
       <a href="../articles/tests/test_coverage.html">Test: Coverage</a>
@@ -144,6 +144,9 @@ of a square matrix." />
       <a href="../articles/tests/test_pow.html">Test: pow</a>
     </li>
     <li>
+      <a href="../articles/tests/test_tr.html">Test: tr</a>
+    </li>
+    <li>
       <a href="../articles/tests/test_zeroes.html">Test: zeroes*</a>
     </li>
   </ul>
@@ -173,7 +176,7 @@ of a square matrix." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Lower Triangle to Symmetric</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jeksterslab/matrixR/blob/master/R/convert.R'><code>R/convert.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/jeksterslab/matrixR/blob/master/R/conversion.R'><code>R/conversion.R</code></a></small>
     <div class="hidden name"><code>low2sym.Rd</code></div>
     </div>
 
@@ -201,10 +204,15 @@ Check if the input matrix is numeric.</p></td>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>Returns a symmetric matrix.</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Other conversion functions: 
+<code><a href='Cor2Cov.html'>Cor2Cov</a>()</code>,
+<code><a href='Cov2Cor.html'>Cov2Cor</a>()</code>,
+<code><a href='up2sym.html'>up2sym</a>()</code></p></div>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
     <p>Ivan Jacob Agaloos Pesigan</p>
-<p>Ivan Jacob Agaloos Pesigan</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='va'>A</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='cn'>NA</span>, ncol <span class='op'>=</span> <span class='fl'>4</span>, nrow <span class='op'>=</span> <span class='fl'>4</span><span class='op'>)</span>

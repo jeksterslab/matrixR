@@ -1,37 +1,30 @@
----
-title: "Test: cor2cov"
-author: "Ivan Jacob Agaloos Pesigan"
-date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Test: cor2cov}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
----
-
-
-```{r knitr_options, include=FALSE, cache=FALSE}
+#' ---
+#' title: "Test: Cov2Cor"
+#' author: "Ivan Jacob Agaloos Pesigan"
+#' date: "`r Sys.Date()`"
+#' output: rmarkdown::html_vignette
+#' vignette: >
+#'   %\VignetteIndexEntry{Test: Cov2Cor}
+#'   %\VignetteEngine{knitr::rmarkdown}
+#'   %\VignetteEncoding{UTF-8}
+#' ---
+#'
+#+ knitr_options, include=FALSE, cache=FALSE
 knitr::opts_chunk$set(
   error = TRUE,
   collapse = TRUE,
   comment = "#>",
   out.width = "100%"
 )
-```
-
-
-
-```{r setup}
+#'
+#+ setup
 library(testthat)
 library(matrixR)
-context("Test cor2cov.")
-```
-
-
-## Parameters
-
-
-```{r parameters}
+context("Test Cov2Cor.")
+#'
+#' ## Parameters
+#'
+#+ parameters
 X <- MASS::mvrnorm(
   n = 10,
   mu = c(0, 0),
@@ -45,38 +38,32 @@ X <- MASS::mvrnorm(
     ncol = 2
   )
 )
-A <- cor(X)
-B <- cov(X)
+A <- cov(X)
+B <- cor(X)
 colnames(B) <- paste0("col", 1:ncol(B))
 rownames(B) <- paste0("row", 1:nrow(B))
 v <- sqrt(diag(B))
 knitr::kable(
   x = B,
   row.names = TRUE,
-  caption = "Covariance Matrix"
+  caption = "Correlation Matrix"
 )
-```
-
-
-## Results
-
-
-```{r results}
-C <- matrixR::cor2cov(A, v)
+#'
+#' ## Results
+#'
+#+ results
+C <- matrixR::Cov2Cor(A)
 colnames(C) <- paste0("col", 1:ncol(C))
 rownames(C) <- paste0("row", 1:nrow(C))
 knitr::kable(
   x = C,
   row.names = TRUE,
-  caption = "Covariance Matrix from cor2cov"
+  caption = "Correlation Matrix from Cov2Cor"
 )
-```
-
-
-## testthat
-
-
-```{r testthat, echo = TRUE}
+#'
+#' ## testthat
+#'
+#+ testthat
 test_that("B.", {
   for (i in 1:nrow(B)) {
     for (j in 1:ncol(B)) {
@@ -88,5 +75,3 @@ test_that("B.", {
     }
   }
 })
-```
-

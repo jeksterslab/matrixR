@@ -51,6 +51,12 @@ params <- as.vector(coef(lm(X[, 2] ~ X[, 1])))
 
 ```{r results}
 x <- as.vector(LS(A, b))
+x
+```
+
+
+
+```{r testhat}
 test_that("LS.", {
   for (i in seq_along(params)) {
     expect_equal(

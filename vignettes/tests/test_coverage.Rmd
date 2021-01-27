@@ -68,6 +68,9 @@ test_that("nonsquare matrix", {
   expect_error(
     pow(A, 0)
   )
+  expect_error(
+    tr(A)
+  )
 })
 B <- matrix(
   data = "text",
@@ -90,14 +93,14 @@ D <- matrix(
   ncol = 2
 )
 v <- c(1, 2)
-test_that("cor2cov - is_posdef", {
+test_that("Cor2Cov - is_posdef", {
   expect_error(
-    cor2cov(D, v)
+    Cor2Cov(D, v)
   )
 })
-test_that("cov2cor - is_posdef", {
+test_that("Cov2Cor - is_posdef", {
   expect_error(
-    cov2cor(D)
+    Cov2Cor(D)
   )
 })
 E <- matrix(
@@ -110,9 +113,9 @@ E <- matrix(
   ncol = 2
 )
 u <- c(-1, 1)
-test_that("cor2cov - v is positive", {
+test_that("Cor2Cov - v is positive", {
   expect_error(
-    cor2cov(E, u)
+    Cor2Cov(E, u)
   )
 })
 ```

@@ -31,6 +31,18 @@ is_idempot(A)
 \references{
 \href{https://en.wikipedia.org/wiki/Idempotent_matrix}{Wikipedia: Nilpotent matrix}
 }
+\seealso{
+Other is functions: 
+\code{\link{is_diag}()},
+\code{\link{is_inv}()},
+\code{\link{is_nilpot}()},
+\code{\link{is_posdef}()},
+\code{\link{is_sing}()},
+\code{\link{is_sqr}()},
+\code{\link{is_sym}()}
+}
 \author{
 Ivan Jacob Agaloos Pesigan
 }
+\concept{is functions}
+\keyword{is}

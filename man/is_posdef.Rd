@@ -29,6 +29,18 @@ is_posdef(Sigma)
 \references{
 \href{https://en.wikipedia.org/wiki/Definiteness_of_a_matrix}{Wikipedia: Definiteness of a Matrix}
 }
+\seealso{
+Other is functions: 
+\code{\link{is_diag}()},
+\code{\link{is_idempot}()},
+\code{\link{is_inv}()},
+\code{\link{is_nilpot}()},
+\code{\link{is_sing}()},
+\code{\link{is_sqr}()},
+\code{\link{is_sym}()}
+}
 \author{
 Ivan Jacob Agaloos Pesigan
 }
+\concept{is functions}
+\keyword{is}

@@ -13,7 +13,16 @@ is_sym(A, chk.num = TRUE)
 Check if the input matrix is numeric.}
 }
 \description{
-Checks if a matrix is symmetric \eqn{\left( \mathbf{A} = \mathbf{A}^{\mathsf{T}} \right)}.
+Checks if the transpose of a matrix is identical to the original matrix.
+}
+\details{
+\deqn{
+    \left(
+      \mathbf{A}
+      =
+      \mathbf{A}^{\mathsf{T}}
+    \right)
+  }
 }
 \examples{
 Sigma <- matrix(
@@ -26,6 +35,18 @@ Sigma <- matrix(
 )
 is_sym(Sigma)
 }
+\seealso{
+Other is functions: 
+\code{\link{is_diag}()},
+\code{\link{is_idempot}()},
+\code{\link{is_inv}()},
+\code{\link{is_nilpot}()},
+\code{\link{is_posdef}()},
+\code{\link{is_sing}()},
+\code{\link{is_sqr}()}
+}
 \author{
 Ivan Jacob Agaloos Pesigan
 }
+\concept{is functions}
+\keyword{is}

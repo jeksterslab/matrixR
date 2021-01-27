@@ -5,13 +5,13 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Test: cor2cov • matrixR</title>
+<title>Test: Cor2Cov • matrixR</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../../bootstrap-toc.css">
 <script src="../../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../../pkgdown.css" rel="stylesheet">
-<script src="../../pkgdown.js"></script><meta property="og:title" content="Test: cor2cov">
+<script src="../../pkgdown.js"></script><meta property="og:title" content="Test: Cor2Cov">
 <meta property="og:description" content="matrixR">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -57,13 +57,13 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
+      <a href="../../articles/tests/test_Cor2Cov.html">Test: Cor2Cov</a>
+    </li>
+    <li>
+      <a href="../../articles/tests/test_Cov2Cor.html">Test: Cov2Cor</a>
+    </li>
+    <li>
       <a href="../../articles/tests/test_LS.html">Test: LS</a>
-    </li>
-    <li>
-      <a href="../../articles/tests/test_cor2cov.html">Test: cor2cov</a>
-    </li>
-    <li>
-      <a href="../../articles/tests/test_cov2cor.html">Test: cov2cor</a>
     </li>
     <li>
       <a href="../../articles/tests/test_coverage.html">Test: Coverage</a>
@@ -102,6 +102,9 @@
       <a href="../../articles/tests/test_pow.html">Test: pow</a>
     </li>
     <li>
+      <a href="../../articles/tests/test_tr.html">Test: tr</a>
+    </li>
+    <li>
       <a href="../../articles/tests/test_zeroes.html">Test: zeroes*</a>
     </li>
   </ul>
@@ -127,16 +130,16 @@
 
       
 
-      </header><script src="test_cor2cov_files/header-attrs-2.6/header-attrs.js"></script><div class="row">
+      </header><script src="test_Cor2Cov_files/header-attrs-2.6/header-attrs.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Test: cor2cov</h1>
+      <h1 data-toc-skip>Test: Cor2Cov</h1>
                         <h4 class="author">Ivan Jacob Agaloos Pesigan</h4>
             
             <h4 class="date">2021-01-27</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/jeksterslab/matrixR/blob/master/vignettes/tests/test_cor2cov.Rmd"><code>vignettes/tests/test_cor2cov.Rmd</code></a></small>
-      <div class="hidden name"><code>test_cor2cov.Rmd</code></div>
+      <small class="dont-index">Source: <a href="https://github.com/jeksterslab/matrixR/blob/master/vignettes/tests/test_Cor2Cov.Rmd"><code>vignettes/tests/test_Cor2Cov.Rmd</code></a></small>
+      <div class="hidden name"><code>test_Cor2Cov.Rmd</code></div>
 
     </div>
 
@@ -145,12 +148,7 @@
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://testthat.r-lib.org">testthat</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/jeksterslab/matrixR">matrixR</a></span><span class="op">)</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Attaching package: 'matrixR'</span>
-<span class="co">#&gt; The following object is masked from 'package:stats':</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;     cov2cor</span>
-<span class="fu"><a href="https://testthat.r-lib.org/reference/context.html">context</a></span><span class="op">(</span><span class="st">"Test cor2cov."</span><span class="op">)</span></code></pre></div>
+<span class="fu"><a href="https://testthat.r-lib.org/reference/context.html">context</a></span><span class="op">(</span><span class="st">"Test Cor2Cov."</span><span class="op">)</span></code></pre></div>
 <div id="parameters" class="section level2">
 <h2 class="hasAnchor">
 <a href="#parameters" class="anchor"></a>Parameters</h2>
@@ -188,13 +186,13 @@
 <tbody>
 <tr class="odd">
 <td align="left">row1</td>
-<td align="right">0.9853118</td>
-<td align="right">0.2204907</td>
+<td align="right">1.1516778</td>
+<td align="right">0.6478818</td>
 </tr>
 <tr class="even">
 <td align="left">row2</td>
-<td align="right">0.2204907</td>
-<td align="right">0.2080688</td>
+<td align="right">0.6478818</td>
+<td align="right">0.7218256</td>
 </tr>
 </tbody>
 </table>
@@ -203,16 +201,16 @@
 <h2 class="hasAnchor">
 <a href="#results" class="anchor"></a>Results</h2>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">C</span> <span class="op">&lt;-</span> <span class="fu">matrixR</span><span class="fu">::</span><span class="fu"><a href="../../reference/cor2cov.html">cor2cov</a></span><span class="op">(</span><span class="va">A</span>, <span class="va">v</span><span class="op">)</span>
+<code class="sourceCode R"><span class="va">C</span> <span class="op">&lt;-</span> <span class="fu">matrixR</span><span class="fu">::</span><span class="fu"><a href="../../reference/Cor2Cov.html">Cor2Cov</a></span><span class="op">(</span><span class="va">A</span>, <span class="va">v</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">C</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"col"</span>, <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">ncol</a></span><span class="op">(</span><span class="va">C</span><span class="op">)</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">C</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"row"</span>, <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">C</span><span class="op">)</span><span class="op">)</span>
 <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span>
   x <span class="op">=</span> <span class="va">C</span>,
   row.names <span class="op">=</span> <span class="cn">TRUE</span>,
-  caption <span class="op">=</span> <span class="st">"Covariance Matrix from cor2cov"</span>
+  caption <span class="op">=</span> <span class="st">"Covariance Matrix from Cor2Cov"</span>
 <span class="op">)</span></code></pre></div>
 <table class="table">
-<caption>Covariance Matrix from cor2cov</caption>
+<caption>Covariance Matrix from Cor2Cov</caption>
 <thead><tr class="header">
 <th align="left"></th>
 <th align="right">col1</th>
@@ -221,13 +219,13 @@
 <tbody>
 <tr class="odd">
 <td align="left">row1</td>
-<td align="right">0.9853118</td>
-<td align="right">0.2204907</td>
+<td align="right">1.1516778</td>
+<td align="right">0.6478818</td>
 </tr>
 <tr class="even">
 <td align="left">row2</td>
-<td align="right">0.2204907</td>
-<td align="right">0.2080688</td>
+<td align="right">0.6478818</td>
+<td align="right">0.7218256</td>
 </tr>
 </tbody>
 </table>

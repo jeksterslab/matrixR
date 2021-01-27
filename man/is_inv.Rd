@@ -15,6 +15,20 @@ Tolerance.}
 \description{
 Checks if a square matrix is invertible.
 }
+\details{
+An \eqn{n \times n} matrix \eqn{\mathbf{A}} is invertible,
+if there exists an \eqn{n \times n} matrix \eqn{\mathbf{A}}
+such that
+
+\deqn{
+    \mathbf{A} \mathbf{B}
+    =
+    \mathbf{B}
+    \mathbf{A}
+    =
+    \mathbf{I}_{n}
+  } .
+}
 \examples{
 Sigma <- matrix(
   data = c(
@@ -31,6 +45,18 @@ is_inv(Sigma)
 
 \href{https://en.wikipedia.org/wiki/Singular_matrix}{Wikipedia: Singular Matrix}
 }
+\seealso{
+Other is functions: 
+\code{\link{is_diag}()},
+\code{\link{is_idempot}()},
+\code{\link{is_nilpot}()},
+\code{\link{is_posdef}()},
+\code{\link{is_sing}()},
+\code{\link{is_sqr}()},
+\code{\link{is_sym}()}
+}
 \author{
 Ivan Jacob Agaloos Pesigan
 }
+\concept{is functions}
+\keyword{is}

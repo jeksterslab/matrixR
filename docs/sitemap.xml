@@ -4,13 +4,13 @@
     <loc>https://github.com/jeksterslab/matrixR//index.html</loc>
   </url>
   <url>
+    <loc>https://github.com/jeksterslab/matrixR//reference/Cor2Cov.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/matrixR//reference/Cov2Cor.html</loc>
+  </url>
+  <url>
     <loc>https://github.com/jeksterslab/matrixR//reference/LS.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/jeksterslab/matrixR//reference/cor2cov.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/jeksterslab/matrixR//reference/cov2cor.html</loc>
   </url>
   <url>
     <loc>https://github.com/jeksterslab/matrixR//reference/is_diag.html</loc>
@@ -52,6 +52,9 @@
     <loc>https://github.com/jeksterslab/matrixR//reference/pow.html</loc>
   </url>
   <url>
+    <loc>https://github.com/jeksterslab/matrixR//reference/tr.html</loc>
+  </url>
+  <url>
     <loc>https://github.com/jeksterslab/matrixR//reference/up2sym.html</loc>
   </url>
   <url>
@@ -64,13 +67,13 @@
     <loc>https://github.com/jeksterslab/matrixR//articles/matrixR.html</loc>
   </url>
   <url>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_Cor2Cov.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_Cov2Cor.html</loc>
+  </url>
+  <url>
     <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_LS.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_cor2cov.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_cov2cor.html</loc>
   </url>
   <url>
     <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_coverage.html</loc>
@@ -107,6 +110,9 @@
   </url>
   <url>
     <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_pow.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_tr.html</loc>
   </url>
   <url>
     <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_zeroes.html</loc>

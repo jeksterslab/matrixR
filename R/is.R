@@ -2,8 +2,18 @@
 #'
 #' @title Is the Matrix Square?
 #'
-#' @description Checks if a matrix is square \eqn{\left( \mathbf{A}_{m \times m} \right)} .
+#' @description Checks if the dimensions of a matrix are identical.
 #'
+#' @details
+#'
+#'   \deqn{
+#'     \left(
+#'       \mathbf{A}_{m \times m}
+#'     \right)
+#'   }
+#'
+#' @family is functions
+#' @keywords is
 #' @param A Matrix.
 #' @param chk.num Logical.
 #'   Check if the input matrix is numeric.
@@ -48,8 +58,20 @@ is_sqr <- function(A,
 #'
 #' @title Is the Matrix Symmetric?
 #'
-#' @description Checks if a matrix is symmetric \eqn{\left( \mathbf{A} = \mathbf{A}^{\mathsf{T}} \right)}.
+#' @description Checks if the transpose of a matrix is identical to the original matrix.
 #'
+#' @details
+#'
+#'   \deqn{
+#'     \left(
+#'       \mathbf{A}
+#'       =
+#'       \mathbf{A}^{\mathsf{T}}
+#'     \right)
+#'   }
+#'
+#' @family is functions
+#' @keywords is
 #' @inheritParams is_sqr
 #' @examples
 #' Sigma <- matrix(
@@ -81,6 +103,8 @@ is_sym <- function(A,
 #'
 #' @description Checks if eigenvalues in a square matrix are positive.
 #'
+#' @family is functions
+#' @keywords is
 #' @inheritParams is_sym
 #' @param tol Numeric.
 #'   Tolerance.
@@ -116,6 +140,21 @@ is_posdef <- function(A,
 #'
 #' @description Checks if a square matrix is invertible.
 #'
+#' @details An \eqn{n \times n} matrix \eqn{\mathbf{A}} is invertible,
+#'   if there exists an \eqn{n \times n} matrix \eqn{\mathbf{A}}
+#'   such that
+#'
+#'   \deqn{
+#'     \mathbf{A} \mathbf{B}
+#'     =
+#'     \mathbf{B}
+#'     \mathbf{A}
+#'     =
+#'     \mathbf{I}_{n}
+#'   } .
+#'
+#' @family is functions
+#' @keywords is
 #' @inheritParams is_posdef
 #' @examples
 #' Sigma <- matrix(
@@ -151,6 +190,11 @@ is_inv <- function(A,
 #'
 #' @description Checks if a square matrix is noninvertible or singular.
 #'
+#' @details An \eqn{n \times n} matrix \eqn{\mathbf{A}} is singular
+#'   if its determinant is zero.
+#'
+#' @family is functions
+#' @keywords is
 #' @inheritParams is_inv
 #' @inherit is_inv references
 #' @examples
@@ -184,6 +228,8 @@ is_sing <- function(A,
 #'   If the sum is less than or equal to the tolerance value,
 #'   all the elements are assumed to be zeroes.
 #'
+#' @family is functions
+#' @keywords is
 #' @inheritParams is_posdef
 #' @examples
 #' I <- diag(3)
@@ -218,6 +264,8 @@ is_diag <- function(A,
 #' @details The square matrix \eqn{\mathbf{A}} is nilpotent
 #'   if all the eigenvalues of \eqn{\mathbf{A}} is zero.
 #'
+#' @family is functions
+#' @keywords is
 #' @inheritParams is_posdef
 #' @references
 #'   [Wikipedia: Nilpotent matrix](https://en.wikipedia.org/wiki/Nilpotent_matrix)
@@ -252,6 +300,8 @@ is_nilpot <- function(A,
 #' @details The square matrix \eqn{\mathbf{A}} is idempotent
 #'   if \eqn{\mathbf{A}^2 = \mathbf{A}}
 #'
+#' @family is functions
+#' @keywords is
 #' @inheritParams is_posdef
 #' @references
 #'   [Wikipedia: Nilpotent matrix](https://en.wikipedia.org/wiki/Idempotent_matrix)

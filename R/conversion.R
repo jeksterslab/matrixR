@@ -24,6 +24,8 @@
 #'   - \eqn{\mathbf{I}_{p \times p}} is an identity matrix,
 #'   - \eqn{\mathbf{v}_{p \times 1}} is a vector of standard deviations.
 #'
+#' @family conversion functions
+#' @keywords conversion
 #' @param A Numeric matrix.
 #'   A \eqn{p \times p} positive definite correlation matrix.
 #' @param v Numeric vector of length `p` or `p by 1` matrix.
@@ -43,9 +45,9 @@
 #'
 #' diag(v) %*% A %*% diag(v)
 #'
-#' cor2cov(A, v)
+#' Cor2Cov(A, v)
 #' @export
-cor2cov <- function(A,
+Cor2Cov <- function(A,
                     v) {
   if (!is_posdef(A)) {
     stop(
@@ -92,6 +94,8 @@ cor2cov <- function(A,
 #'   - \eqn{\mathbf{v}_{p \times 1}} is a vector of standard deviations,
 #'     that is, the square root of the diagonal elements of \eqn{\mathbf{A}}.
 #'
+#' @family conversion functions
+#' @keywords conversion
 #' @param A Numeric matrix.
 #'   A \eqn{p \times p} positive definite covariance matrix.
 #' @return
@@ -106,11 +110,11 @@ cor2cov <- function(A,
 #'   ncol = 3
 #' )
 #'
-#' stats::cov2cor(A)
+#' cov2cor(A)
 #'
-#' matrixR::cov2cor(A)
+#' Cov2Cor(A)
 #' @export
-cov2cor <- function(A) {
+Cov2Cor <- function(A) {
   if (!is_posdef(A)) {
     stop(
       "Input matrix should be positive definite."
@@ -142,7 +146,8 @@ cov2cor <- function(A) {
 #' @description Creates a symmetric matrix from the lower triangle
 #'   of a square matrix.
 #'
-#' @author Ivan Jacob Agaloos Pesigan
+#' @family conversion functions
+#' @keywords conversion
 #' @inheritParams is_sqr
 #' @return Returns a symmetric matrix.
 #' @examples
@@ -171,7 +176,8 @@ low2sym <- function(A,
 #' @description Creates a symmetric matrix from the upper triangle
 #'   of a square matrix.
 #'
-#' @author Ivan Jacob Agaloos Pesigan
+#' @family conversion functions
+#' @keywords conversion
 #' @inheritParams is_sqr
 #' @return Returns a symmetric matrix.
 #' @examples
