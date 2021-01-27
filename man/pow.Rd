@@ -21,7 +21,7 @@ The power of a matrix is given by
     \mathbf{A}^{n}
   }
 
-Let \eqn{n} be a 0
+Let \eqn{n} be 0
 
 \deqn{
     \mathbf{A}^{0}
@@ -42,6 +42,8 @@ Let \eqn{n} be a negative integer for example \eqn{-2}
 \deqn{
     \mathbf{A}^{-2}
     =
+    \left( \mathbf{A}^{-1} \right)^2
+    =
     \left( \mathbf{A}^{-1} \right) \cdot \left( \mathbf{A}^{-1} \right) .
   }
 }
@@ -54,6 +56,9 @@ A <- matrix(
   ),
   ncol = 3
 )
+
+A \%*\% A
+
 pow(A, 2)
 }
 \seealso{

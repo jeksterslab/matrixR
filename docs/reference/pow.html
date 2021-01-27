@@ -204,7 +204,7 @@
 <p>$$
     \mathbf{A}^{n}
   $$</p>
-<p>Let \(n\) be a 0</p>
+<p>Let \(n\) be 0</p>
 <p>$$
     \mathbf{A}^{0}
     =
@@ -219,6 +219,8 @@
 <p>Let \(n\) be a negative integer for example \(-2\)</p>
 <p>$$
     \mathbf{A}^{-2}
+    =
+    \left( \mathbf{A}^{-1} \right)^2
     =
     \left( \mathbf{A}^{-1} \right) \cdot \left( \mathbf{A}^{-1} \right) .
   $$</p>
@@ -239,6 +241,12 @@
   <span class='op'>)</span>,
   ncol <span class='op'>=</span> <span class='fl'>3</span>
 <span class='op'>)</span>
+
+<span class='va'>A</span> <span class='op'>%*%</span> <span class='va'>A</span>
+</div><div class='output co'>#&gt;          [,1]     [,2]     [,3]
+#&gt; [1,] 66445.31 56953.12 37968.75
+#&gt; [2,] 56953.12 75937.50 56953.12
+#&gt; [3,] 37968.75 56953.12 66445.31</div><div class='input'>
 <span class='fu'>pow</span><span class='op'>(</span><span class='va'>A</span>, <span class='fl'>2</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;          [,1]     [,2]     [,3]
 #&gt; [1,] 66445.31 56953.12 37968.75

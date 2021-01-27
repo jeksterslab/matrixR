@@ -20,7 +20,7 @@ articles:
   tests/test_pow: test_pow.html
   tests/test_tr: test_tr.html
   tests/test_zeroes: test_zeroes.html
-last_built: 2021-01-27T11:30Z
+last_built: 2021-01-27T11:46Z
 urls:
   reference: https://github.com/jeksterslab/matrixR//reference
   article: https://github.com/jeksterslab/matrixR//articles

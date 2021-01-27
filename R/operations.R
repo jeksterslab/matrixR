@@ -10,7 +10,7 @@
 #'     \mathbf{A}^{n}
 #'   }
 #'
-#'   Let \eqn{n} be a 0
+#'   Let \eqn{n} be 0
 #'
 #'   \deqn{
 #'     \mathbf{A}^{0}
@@ -31,6 +31,8 @@
 #'   \deqn{
 #'     \mathbf{A}^{-2}
 #'     =
+#'     \left( \mathbf{A}^{-1} \right)^2
+#'     =
 #'     \left( \mathbf{A}^{-1} \right) \cdot \left( \mathbf{A}^{-1} \right) .
 #'   }
 #'
@@ -47,6 +49,9 @@
 #'   ),
 #'   ncol = 3
 #' )
+#'
+#' A %*% A
+#'
 #' pow(A, 2)
 #' @export
 pow <- function(A, n) {
