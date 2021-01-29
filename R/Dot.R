@@ -60,3 +60,19 @@ Dot.yac_symbol <- function(u, v, str = TRUE, ...) {
     )
   }
 }
+
+#' Dot Product
+#'
+#' @author Ivan Jacob Agaloos Pesigan
+#' @family operation functions
+#' @keywords operation
+#' @examples
+#' c(1, 3, -5) %.% c(4, -2, -1)
+#' @inherit Dot description details return references
+#' @inheritParams Dot
+#' @export
+"%.%" <- function(u, v) {
+  return(
+    Dot.default(u, v)
+  )
+}
