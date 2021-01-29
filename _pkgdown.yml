@@ -10,4 +10,8 @@ reference:
   desc: Predicates
 - contents:
   - has_keyword("predicate")
+- title: Operations
+  desc: Operations
+- contents:
+  - has_keyword("operation")
  

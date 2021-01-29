@@ -99,6 +99,9 @@ and FALSE otherwise." />
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
+      <a href="../articles/tests/test_Dot.html">Test: Dot</a>
+    </li>
+    <li>
       <a href="../articles/tests/test_IsDiagonal.html">Test: IsDiagonal</a>
     </li>
     <li>
@@ -192,34 +195,6 @@ and <code>FALSE</code> otherwise.</p>
     <p>A vector is an array of numbers, symbols, or expressions,
 typically denoted by lowercase roman letters such as
 \(\mathbf{v}\) and \(\mathbf{u}\).</p>
-<p>An atomic vector is given by</p>
-<p>$$
-  \mathbf{v} = \left\{ v_1, v_2, v_3, \cdots \right\} .
-$$</p>
-<p>An \(m \times 1\) column vector is given by</p>
-<p>$$
-  \mathbf{v}
-  =
-  \begin{pmatrix}
-    v_1 \\ v_2 \\ v_3 \\ \vdots \\ v_m
-  \end{pmatrix}
-  =
-  \begin{pmatrix}
-    v_1 &amp; v_2 &amp; v_3 &amp; \cdots &amp; v_m
-  \end{pmatrix}^{\mathsf{T}} .
-$$</p>
-<p>A \(1 \times n\) row vector is given by</p>
-<p>$$
-  \mathbf{v}
-  =
-  \begin{pmatrix}
-    v_1 &amp; v_2 &amp; v_3 &amp; \cdots &amp; v_n
-  \end{pmatrix}
-  =
-  \begin{pmatrix}
-    v_1 \\ v_2 \\ v_3 \\ \vdots \\ v_n
-  \end{pmatrix}^{\mathsf{T}}
-$$</p>
 <p><code>v</code> is considered to be a vector
 if <code><a href='https://rdrr.io/r/base/vector.html'>is.vector(v)</a></code> returns <code>TRUE</code> or
 <code>v</code> is a <code>matrix</code>

@@ -3,6 +3,7 @@ pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   matrixR: matrixR.html
+  tests/test_Dot: test_Dot.html
   tests/test_IsDiagonal: test_IsDiagonal.html
   tests/test_IsIdempotent: test_IsIdempotent.html
   tests/test_IsInvertible: test_IsInvertible.html
@@ -14,7 +15,7 @@ articles:
   tests/test_IsSquareMatrix: test_IsSquareMatrix.html
   tests/test_IsSymmetric: test_IsSymmetric.html
   tests/test_IsVector: test_IsVector.html
-last_built: 2021-01-29T13:58Z
+last_built: 2021-01-29T15:02Z
 urls:
   reference: https://github.com/jeksterslab/matrixR//reference
   article: https://github.com/jeksterslab/matrixR//articles

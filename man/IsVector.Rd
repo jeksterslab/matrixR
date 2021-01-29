@@ -27,40 +27,6 @@ A vector is an array of numbers, symbols, or expressions,
 typically denoted by lowercase roman letters such as
 \eqn{\mathbf{v}} and \eqn{\mathbf{u}}.
 
-An atomic vector is given by
-
-\deqn{
-  \mathbf{v} = \left\{ v_1, v_2, v_3, \cdots \right\} .
-}
-
-An \eqn{m \times 1} column vector is given by
-
-\deqn{
-  \mathbf{v}
-  =
-  \begin{pmatrix}
-    v_1 \\ v_2 \\ v_3 \\ \vdots \\ v_m
-  \end{pmatrix}
-  =
-  \begin{pmatrix}
-    v_1 & v_2 & v_3 & \cdots & v_m
-  \end{pmatrix}^{\mathsf{T}} .
-}
-
-A \eqn{1 \times n} row vector is given by
-
-\deqn{
-  \mathbf{v}
-  =
-  \begin{pmatrix}
-    v_1 & v_2 & v_3 & \cdots & v_n
-  \end{pmatrix}
-  =
-  \begin{pmatrix}
-    v_1 \\ v_2 \\ v_3 \\ \vdots \\ v_n
-  \end{pmatrix}^{\mathsf{T}}
-}
-
 \code{v} is considered to be a vector
 if \code{is.vector(v)} returns \code{TRUE} or
 \code{v} is a \code{matrix}
