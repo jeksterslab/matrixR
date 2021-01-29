@@ -1,0 +1,56 @@
+#' ---
+#' title: "Test: IsScalar"
+#' author: "Ivan Jacob Agaloos Pesigan"
+#' date: "`r Sys.Date()`"
+#' output: rmarkdown::html_vignette
+#' vignette: >
+#'   %\VignetteIndexEntry{Test: IsScalar}
+#'   %\VignetteEngine{knitr::rmarkdown}
+#'   %\VignetteEncoding{UTF-8}
+#' ---
+#'
+#+ knitr_options, include=FALSE, cache=FALSE
+knitr::opts_chunk$set(
+  error = TRUE,
+  collapse = TRUE,
+  comment = "#>",
+  out.width = "100%"
+)
+#'
+#+ setup
+library(testthat)
+library(matrixR)
+context("Test IsScalar.")
+#'
+#+ testthat
+test_that("TRUE.", {
+  expect_true(
+    IsScalar(1)
+  )
+  expect_true(
+    IsScalar(as.matrix(1))
+  )
+  # yac_symbol
+  expect_true(
+    IsScalar(Ryacas::ysym(1))
+  )
+})
+test_that("FALSE.", {
+  expect_false(
+    IsScalar(c(1, 2, 3))
+  )
+  expect_false(
+    IsScalar(as.matrix(c(1, 2, 3)))
+  )
+  # to cover OTHERWISE
+  expect_false(
+    IsScalar(data.frame(1))
+  )
+  # yac_symbol
+  expect_false(
+    IsScalar(Ryacas::ysym(c(1, 2, 3)))
+  )
+  expect_false(
+    IsScalar(Ryacas::ysym(as.matrix(c(1, 2, 3))))
+  )
+})

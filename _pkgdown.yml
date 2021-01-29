@@ -3,31 +3,11 @@ url: https://github.com/jeksterslab/matrixR/
 
 reference:
 - title: matrixR
-  desc: Package description.
+  desc: Package description
 - contents:
   - has_keyword("description")
-- title: is Functions
-  desc: Test matrix properties.
+- title: Predicates
+  desc: Predicates
 - contents:
-  - has_keyword("is")
-- title: Operation Functions
-  desc: Matrix operations.
-- contents:
-  - has_keyword("operation")
-- title: Conversion Functions
-  desc: Matrix conversion.
-- contents:
-  - has_keyword("conversion")
-- title: Identity Matrix
-  desc: Generate identity matrix.
-- contents:
-  - has_keyword("ones")
-- title: Zero Matrix
-  desc: Generate zero matrix.
-- contents:
-  - has_keyword("zeroes")
-- title: Solve
-  desc: Matrix solutions.
-- contents:
-  - has_keyword("solve")
-
+  - has_keyword("predicate")
+ 

@@ -4,117 +4,75 @@
     <loc>https://github.com/jeksterslab/matrixR//index.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/matrixR//reference/Cor2Cov.html</loc>
+    <loc>https://github.com/jeksterslab/matrixR//reference/IsDiagonal.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/matrixR//reference/Cov2Cor.html</loc>
+    <loc>https://github.com/jeksterslab/matrixR//reference/IsIdempotent.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/matrixR//reference/LS.html</loc>
+    <loc>https://github.com/jeksterslab/matrixR//reference/IsInvertible.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/matrixR//reference/is_diag.html</loc>
+    <loc>https://github.com/jeksterslab/matrixR//reference/IsMatrix.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/matrixR//reference/is_idempot.html</loc>
+    <loc>https://github.com/jeksterslab/matrixR//reference/IsNilpotent.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/matrixR//reference/is_inv.html</loc>
+    <loc>https://github.com/jeksterslab/matrixR//reference/IsPositiveDefinite.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/matrixR//reference/is_nilpot.html</loc>
+    <loc>https://github.com/jeksterslab/matrixR//reference/IsScalar.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/matrixR//reference/is_posdef.html</loc>
+    <loc>https://github.com/jeksterslab/matrixR//reference/IsSingular.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/matrixR//reference/is_sing.html</loc>
+    <loc>https://github.com/jeksterslab/matrixR//reference/IsSquareMatrix.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/matrixR//reference/is_sqr.html</loc>
+    <loc>https://github.com/jeksterslab/matrixR//reference/IsSymmetric.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/matrixR//reference/is_sym.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/jeksterslab/matrixR//reference/low2sym.html</loc>
+    <loc>https://github.com/jeksterslab/matrixR//reference/IsVector.html</loc>
   </url>
   <url>
     <loc>https://github.com/jeksterslab/matrixR//reference/matrixR.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/matrixR//reference/ones.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/jeksterslab/matrixR//reference/ones_from.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/jeksterslab/matrixR//reference/pow.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/jeksterslab/matrixR//reference/tr.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/jeksterslab/matrixR//reference/up2sym.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/jeksterslab/matrixR//reference/zeroes.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/jeksterslab/matrixR//reference/zeroes_from.html</loc>
-  </url>
-  <url>
     <loc>https://github.com/jeksterslab/matrixR//articles/matrixR.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_Cor2Cov.html</loc>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_IsDiagonal.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_Cov2Cor.html</loc>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_IsIdempotent.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_LS.html</loc>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_IsInvertible.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_coverage.html</loc>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_IsMatrix.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_is_diag.html</loc>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_IsNilpotent.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_is_idempot.html</loc>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_IsPositiveDefinite.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_is_inv.html</loc>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_IsScalar.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_is_nilpot.html</loc>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_IsSingular.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_is_posdef.html</loc>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_IsSquareMatrix.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_is_sing.html</loc>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_IsSymmetric.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_is_sqr.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_is_sym.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_loworup2sym.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_ones.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_pow.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_tr.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_zeroes.html</loc>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_IsVector.html</loc>
   </url>
 </urlset>

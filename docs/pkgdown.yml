@@ -3,24 +3,18 @@ pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   matrixR: matrixR.html
-  tests/test_Cor2Cov: test_Cor2Cov.html
-  tests/test_Cov2Cor: test_Cov2Cor.html
-  tests/test_LS: test_LS.html
-  tests/test_coverage: test_coverage.html
-  tests/test_is_diag: test_is_diag.html
-  tests/test_is_idempot: test_is_idempot.html
-  tests/test_is_inv: test_is_inv.html
-  tests/test_is_nilpot: test_is_nilpot.html
-  tests/test_is_posdef: test_is_posdef.html
-  tests/test_is_sing: test_is_sing.html
-  tests/test_is_sqr: test_is_sqr.html
-  tests/test_is_sym: test_is_sym.html
-  tests/test_loworup2sym: test_loworup2sym.html
-  tests/test_ones: test_ones.html
-  tests/test_pow: test_pow.html
-  tests/test_tr: test_tr.html
-  tests/test_zeroes: test_zeroes.html
-last_built: 2021-01-27T11:46Z
+  tests/test_IsDiagonal: test_IsDiagonal.html
+  tests/test_IsIdempotent: test_IsIdempotent.html
+  tests/test_IsInvertible: test_IsInvertible.html
+  tests/test_IsMatrix: test_IsMatrix.html
+  tests/test_IsNilpotent: test_IsNilpotent.html
+  tests/test_IsPositiveDefinite: test_IsPositiveDefinite.html
+  tests/test_IsScalar: test_IsScalar.html
+  tests/test_IsSingular: test_IsSingular.html
+  tests/test_IsSquareMatrix: test_IsSquareMatrix.html
+  tests/test_IsSymmetric: test_IsSymmetric.html
+  tests/test_IsVector: test_IsVector.html
+last_built: 2021-01-29T12:41Z
 urls:
   reference: https://github.com/jeksterslab/matrixR//reference
   article: https://github.com/jeksterslab/matrixR//articles

@@ -5,8 +5,7 @@
 \alias{matrixR}
 \title{matrixR: Matrix/Linear Algebra}
 \description{
-A collection of functions related to
-Matrix/Linear Algebra.
+A collection of functions related to Matrix/Linear Algebra.
 }
 \author{
 Ivan Jacob Agaloos Pesigan

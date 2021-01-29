@@ -24,7 +24,9 @@ Depends:
 Imports:
     base,
     utils,
-    stats
+    stats,
+    methods,
+    Ryacas
 Suggests:
     knitr,
     rmarkdown,

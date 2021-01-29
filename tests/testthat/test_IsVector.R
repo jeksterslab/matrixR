@@ -1,0 +1,53 @@
+#' ---
+#' title: "Test: IsVector"
+#' author: "Ivan Jacob Agaloos Pesigan"
+#' date: "`r Sys.Date()`"
+#' output: rmarkdown::html_vignette
+#' vignette: >
+#'   %\VignetteIndexEntry{Test: IsVector}
+#'   %\VignetteEngine{knitr::rmarkdown}
+#'   %\VignetteEncoding{UTF-8}
+#' ---
+#'
+#+ knitr_options, include=FALSE, cache=FALSE
+knitr::opts_chunk$set(
+  error = TRUE,
+  collapse = TRUE,
+  comment = "#>",
+  out.width = "100%"
+)
+#'
+#+ setup
+library(testthat)
+library(matrixR)
+context("Test IsVector.")
+#'
+#+ testthat
+test_that("TRUE.", {
+  expect_true(
+    IsVector(1:5)
+  )
+  expect_true(
+    IsVector(matrix(1:5, ncol = 1))
+  )
+  expect_true(
+    IsVector(matrix(1:5, nrow = 1))
+  )
+  # yac_symbol
+  expect_true(
+    IsVector(Ryacas::ysym(1:5))
+  )
+})
+test_that("FALSE.", {
+  expect_false(
+    IsVector(matrix(1:10, ncol = 2))
+  )
+  # to cover OTHERWISE
+  expect_false(
+    IsVector(data.frame(1))
+  )
+  # yac_symbol
+  expect_false(
+    IsVector(Ryacas::ysym(matrix(1:10, ncol = 2)))
+  )
+})
