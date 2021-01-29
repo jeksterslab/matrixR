@@ -42,6 +42,7 @@ Other predicate functions:
 \code{\link{IsInvertible}()},
 \code{\link{IsMatrix}()},
 \code{\link{IsNilpotent}()},
+\code{\link{IsOrthogonal}()},
 \code{\link{IsPositiveDefinite}()},
 \code{\link{IsScalar}()},
 \code{\link{IsSquareMatrix}()},

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Test for a Square Matrix — IsSquareMatrix • matrixR</title>
+<title>Dot Product — %.% • matrixR</title>
 
 
 <!-- jquery -->
@@ -39,9 +39,8 @@
 
 
 
-<meta property="og:title" content="Test for a Square Matrix — IsSquareMatrix" />
-<meta property="og:description" content="IsSquareMatrix() returns TRUE if A is a square matrix,
-and FALSE otherwise." />
+<meta property="og:title" content="Dot Product — %.%" />
+<meta property="og:description" content="Returns the dot product of two vectors." />
 
 
 
@@ -163,74 +162,51 @@ and FALSE otherwise." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Test for a Square Matrix</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jeksterslab/matrixR/blob/master/R/IsSquareMatrix.R'><code>R/IsSquareMatrix.R</code></a></small>
-    <div class="hidden name"><code>IsSquareMatrix.Rd</code></div>
+    <h1>Dot Product</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jeksterslab/matrixR/blob/master/R/Dot.R'><code>R/Dot.R</code></a></small>
+    <div class="hidden name"><code>grapes-.-grapes.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p><code>IsSquareMatrix()</code> returns <code>TRUE</code> if <code>A</code> is a square matrix,
-and <code>FALSE</code> otherwise.</p>
+    <p>Returns the dot product of two vectors.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>IsSquareMatrix</span><span class='op'>(</span><span class='va'>A</span><span class='op'>)</span>
-
-<span class='co'># S3 method for default</span>
-<span class='fu'>IsSquareMatrix</span><span class='op'>(</span><span class='va'>A</span><span class='op'>)</span>
-
-<span class='co'># S3 method for yac_symbol</span>
-<span class='fu'>IsSquareMatrix</span><span class='op'>(</span><span class='va'>A</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='va'>u</span> <span class='op'>%.%</span> <span class='va'>v</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>A</th>
-      <td><p>Input.</p></td>
+      <th>u</th>
+      <td><p>Numeric vector of length <code>m</code>.</p></td>
+    </tr>
+    <tr>
+      <th>v</th>
+      <td><p>Numeric vector of length <code>m</code>.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>Logical.</p>
+    <p>Numeric.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>A matrix \(\mathbf{A}\) is square
-if it has the same number of rows and columns
-$$
-    \mathbf{A}_{m \times m} .
-  $$</p>
-<p><code>A</code> is considered to be a square matrix
-if <code>dim(A)[1] == dim(A)[2]</code> returns <code>TRUE</code>.</p>
+    <p>The dot product is the sum of the products of corresponding entries
+of two vectors with the same length.</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
-    <p><a href='https://en.wikipedia.org/wiki/Square_matrix'>Wikipedia: Square matrix</a></p>
+    <p><a href='https://en.wikipedia.org/wiki/Dot_product'>Wikipedia: Dot product</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other predicate functions: 
-<code><a href='IsDiagonal.html'>IsDiagonal</a>()</code>,
-<code><a href='IsIdempotent.html'>IsIdempotent</a>()</code>,
-<code><a href='IsInvertible.html'>IsInvertible</a>()</code>,
-<code><a href='IsMatrix.html'>IsMatrix</a>()</code>,
-<code><a href='IsNilpotent.html'>IsNilpotent</a>()</code>,
-<code><a href='IsOrthogonal.html'>IsOrthogonal</a>()</code>,
-<code><a href='IsPositiveDefinite.html'>IsPositiveDefinite</a>()</code>,
-<code><a href='IsScalar.html'>IsScalar</a>()</code>,
-<code><a href='IsSingular.html'>IsSingular</a>()</code>,
-<code><a href='IsSymmetric.html'>IsSymmetric</a>()</code>,
-<code><a href='IsVector.html'>IsVector</a>()</code></p></div>
+    <div class='dont-index'><p>Other operation functions: 
+<code><a href='Dot.html'>Dot</a>()</code></p></div>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
     <p>Ivan Jacob Agaloos Pesigan</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># TRUE</span>
-<span class='fu'>IsSquareMatrix</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>9</span>, ncol <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] TRUE</div><div class='input'>
-<span class='co'># FALSE</span>
-<span class='fu'>IsSquareMatrix</span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>5</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] FALSE</div><div class='input'><span class='fu'>IsSquareMatrix</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span>, nrow <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] FALSE</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>3</span>, <span class='op'>-</span><span class='fl'>5</span><span class='op'>)</span> <span class='op'>%.%</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>4</span>, <span class='op'>-</span><span class='fl'>2</span>, <span class='op'>-</span><span class='fl'>1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] 3</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

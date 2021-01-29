@@ -22,6 +22,9 @@
     <loc>https://github.com/jeksterslab/matrixR//reference/IsNilpotent.html</loc>
   </url>
   <url>
+    <loc>https://github.com/jeksterslab/matrixR//reference/IsOrthogonal.html</loc>
+  </url>
+  <url>
     <loc>https://github.com/jeksterslab/matrixR//reference/IsPositiveDefinite.html</loc>
   </url>
   <url>
@@ -38,6 +41,9 @@
   </url>
   <url>
     <loc>https://github.com/jeksterslab/matrixR//reference/IsVector.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/matrixR//reference/grapes-.-grapes.html</loc>
   </url>
   <url>
     <loc>https://github.com/jeksterslab/matrixR//reference/matrixR.html</loc>
@@ -62,6 +68,9 @@
   </url>
   <url>
     <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_IsNilpotent.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_IsOrthogonal.html</loc>
   </url>
   <url>
     <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_IsPositiveDefinite.html</loc>

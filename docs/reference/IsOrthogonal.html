@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Test for a Square Matrix — IsSquareMatrix • matrixR</title>
+<title>Test for an Orthogonal Matrix — IsOrthogonal • matrixR</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Test for a Square Matrix — IsSquareMatrix" />
-<meta property="og:description" content="IsSquareMatrix() returns TRUE if A is a square matrix,
+<meta property="og:title" content="Test for an Orthogonal Matrix — IsOrthogonal" />
+<meta property="og:description" content="IsOrthogonal() returns TRUE if A is an orthogonal matrix,
 and FALSE otherwise." />
 
 
@@ -163,23 +163,23 @@ and FALSE otherwise." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Test for a Square Matrix</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jeksterslab/matrixR/blob/master/R/IsSquareMatrix.R'><code>R/IsSquareMatrix.R</code></a></small>
-    <div class="hidden name"><code>IsSquareMatrix.Rd</code></div>
+    <h1>Test for an Orthogonal Matrix</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jeksterslab/matrixR/blob/master/R/IsOrthogonal.R'><code>R/IsOrthogonal.R</code></a></small>
+    <div class="hidden name"><code>IsOrthogonal.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p><code>IsSquareMatrix()</code> returns <code>TRUE</code> if <code>A</code> is a square matrix,
+    <p><code>IsOrthogonal()</code> returns <code>TRUE</code> if <code>A</code> is an orthogonal matrix,
 and <code>FALSE</code> otherwise.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>IsSquareMatrix</span><span class='op'>(</span><span class='va'>A</span><span class='op'>)</span>
+    <pre class="usage"><span class='fu'>IsOrthogonal</span><span class='op'>(</span><span class='va'>A</span>, <span class='va'>...</span><span class='op'>)</span>
 
 <span class='co'># S3 method for default</span>
-<span class='fu'>IsSquareMatrix</span><span class='op'>(</span><span class='va'>A</span><span class='op'>)</span>
+<span class='fu'>IsOrthogonal</span><span class='op'>(</span><span class='va'>A</span>, tol <span class='op'>=</span> <span class='fl'>1e-08</span>, <span class='va'>...</span><span class='op'>)</span>
 
 <span class='co'># S3 method for yac_symbol</span>
-<span class='fu'>IsSquareMatrix</span><span class='op'>(</span><span class='va'>A</span><span class='op'>)</span></pre>
+<span class='fu'>IsOrthogonal</span><span class='op'>(</span><span class='va'>A</span>, <span class='va'>...</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -188,6 +188,14 @@ and <code>FALSE</code> otherwise.</p>
       <th>A</th>
       <td><p>Input.</p></td>
     </tr>
+    <tr>
+      <th>...</th>
+      <td><p>...</p></td>
+    </tr>
+    <tr>
+      <th>tol</th>
+      <td><p>Numeric. Tolerance.</p></td>
+    </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
@@ -195,16 +203,21 @@ and <code>FALSE</code> otherwise.</p>
     <p>Logical.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>A matrix \(\mathbf{A}\) is square
-if it has the same number of rows and columns
+    <p>An \(m \times m\) matrix \(\mathbf{A}\) is orthogonal if
 $$
-    \mathbf{A}_{m \times m} .
+    \mathbf{A}^{\mathsf{T}} \mathbf{A}
+    =
+    \mathbf{A} \mathbf{A}^{\mathsf{T}}
+    \mathbf{I} .
   $$</p>
-<p><code>A</code> is considered to be a square matrix
-if <code>dim(A)[1] == dim(A)[2]</code> returns <code>TRUE</code>.</p>
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
-
-    <p><a href='https://en.wikipedia.org/wiki/Square_matrix'>Wikipedia: Square matrix</a></p>
+<p>Or equivalently
+$$
+    \mathbf{A}^{\mathsf{T}}
+    =
+    \mathbf{A}^{-1} .
+  $$</p>
+<p><code>A</code> is considered to be an orthogonal matrix
+if <code>all(abs(crossprod(A) - diag(dim(A)[1])) &lt;= tol)</code> returns <code>TRUE</code>.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other predicate functions: 
@@ -213,10 +226,10 @@ if <code>dim(A)[1] == dim(A)[2]</code> returns <code>TRUE</code>.</p>
 <code><a href='IsInvertible.html'>IsInvertible</a>()</code>,
 <code><a href='IsMatrix.html'>IsMatrix</a>()</code>,
 <code><a href='IsNilpotent.html'>IsNilpotent</a>()</code>,
-<code><a href='IsOrthogonal.html'>IsOrthogonal</a>()</code>,
 <code><a href='IsPositiveDefinite.html'>IsPositiveDefinite</a>()</code>,
 <code><a href='IsScalar.html'>IsScalar</a>()</code>,
 <code><a href='IsSingular.html'>IsSingular</a>()</code>,
+<code><a href='IsSquareMatrix.html'>IsSquareMatrix</a>()</code>,
 <code><a href='IsSymmetric.html'>IsSymmetric</a>()</code>,
 <code><a href='IsVector.html'>IsVector</a>()</code></p></div>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
@@ -225,11 +238,10 @@ if <code>dim(A)[1] == dim(A)[2]</code> returns <code>TRUE</code>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># TRUE</span>
-<span class='fu'>IsSquareMatrix</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>9</span>, ncol <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'>IsOrthogonal</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>0</span>, <span class='fl'>0</span>, <span class='fl'>1</span><span class='op'>)</span>, ncol <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] TRUE</div><div class='input'>
 <span class='co'># FALSE</span>
-<span class='fu'>IsSquareMatrix</span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>5</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] FALSE</div><div class='input'><span class='fu'>IsSquareMatrix</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span>, nrow <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'>IsOrthogonal</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='fl'>1</span>, nrow <span class='op'>=</span> <span class='fl'>2</span>, ncol <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] FALSE</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

@@ -31,6 +31,10 @@ test_that("Dot.", {
     ),
     3
   )
+  expect_equal(
+    c(1, 3, -5) %.% c(4, -2, -1),
+    3
+  )
   # yac_symbol
   expect_equal(
     as.numeric(
@@ -50,5 +54,21 @@ test_that("Dot.", {
       )
     ),
     3
+  )
+})
+#'
+#+ errors
+test_that("Dot.", {
+  expect_error(
+    Dot(
+      c("a", "b", "c"),
+      c("a", "b", "c")
+    )
+  )
+  expect_error(
+    Dot(
+      c("a", "b", "c"),
+      c("a", "b")
+    )
   )
 })

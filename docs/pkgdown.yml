@@ -9,13 +9,14 @@ articles:
   tests/test_IsInvertible: test_IsInvertible.html
   tests/test_IsMatrix: test_IsMatrix.html
   tests/test_IsNilpotent: test_IsNilpotent.html
+  tests/test_IsOrthogonal: test_IsOrthogonal.html
   tests/test_IsPositiveDefinite: test_IsPositiveDefinite.html
   tests/test_IsScalar: test_IsScalar.html
   tests/test_IsSingular: test_IsSingular.html
   tests/test_IsSquareMatrix: test_IsSquareMatrix.html
   tests/test_IsSymmetric: test_IsSymmetric.html
   tests/test_IsVector: test_IsVector.html
-last_built: 2021-01-29T15:02Z
+last_built: 2021-01-29T16:03Z
 urls:
   reference: https://github.com/jeksterslab/matrixR//reference
   article: https://github.com/jeksterslab/matrixR//articles
