@@ -1,0 +1,41 @@
+#' ---
+#' title: "Test: Identity"
+#' author: "Ivan Jacob Agaloos Pesigan"
+#' date: "`r Sys.Date()`"
+#' output: rmarkdown::html_vignette
+#' vignette: >
+#'   %\VignetteIndexEntry{Test: Identity}
+#'   %\VignetteEngine{knitr::rmarkdown}
+#'   %\VignetteEncoding{UTF-8}
+#' ---
+#'
+#+ knitr_options, include=FALSE, cache=FALSE
+knitr::opts_chunk$set(
+  error = TRUE,
+  collapse = TRUE,
+  comment = "#>",
+  out.width = "100%"
+)
+#'
+#+ setup
+library(testthat)
+library(matrixR)
+context("Test Identity.")
+#'
+A <- matrix(1:9, ncol = 3)
+#'
+#+ testthat
+test_that("Identity", {
+  expect_equal(
+    3,
+    sum(Identity(dim(A)[1])),
+    sum(IdentityFrom(A))
+  )
+})
+#'
+#+ error
+test_that("Error", {
+  expect_error(
+    IdentityFrom(matrix(1:10, ncol = 2))
+  )
+})

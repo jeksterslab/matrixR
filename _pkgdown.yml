@@ -14,4 +14,8 @@ reference:
   desc: Operations
 - contents:
   - has_keyword("operation")
+- title: Constructors
+  desc: Constructors
+- contents:
+  - has_keyword("constructor")
  

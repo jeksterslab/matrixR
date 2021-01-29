@@ -58,7 +58,7 @@ test_that("Dot.", {
 })
 #'
 #+ errors
-test_that("Dot.", {
+test_that("Error.", {
   expect_error(
     Dot(
       c("a", "b", "c"),

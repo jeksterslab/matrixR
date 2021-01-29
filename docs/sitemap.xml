@@ -7,6 +7,12 @@
     <loc>https://github.com/jeksterslab/matrixR//reference/Dot.html</loc>
   </url>
   <url>
+    <loc>https://github.com/jeksterslab/matrixR//reference/Identity.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/matrixR//reference/IdentityFrom.html</loc>
+  </url>
+  <url>
     <loc>https://github.com/jeksterslab/matrixR//reference/IsDiagonal.html</loc>
   </url>
   <url>
@@ -43,6 +49,12 @@
     <loc>https://github.com/jeksterslab/matrixR//reference/IsVector.html</loc>
   </url>
   <url>
+    <loc>https://github.com/jeksterslab/matrixR//reference/ZeroMatrix.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/matrixR//reference/ZeroMatrixFrom.html</loc>
+  </url>
+  <url>
     <loc>https://github.com/jeksterslab/matrixR//reference/grapes-.-grapes.html</loc>
   </url>
   <url>
@@ -53,6 +65,9 @@
   </url>
   <url>
     <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_Dot.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_Identity.html</loc>
   </url>
   <url>
     <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_IsDiagonal.html</loc>
@@ -89,5 +104,8 @@
   </url>
   <url>
     <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_IsVector.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_ZeroMatrix.html</loc>
   </url>
 </urlset>

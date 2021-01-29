@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Test for a Positive Definite Matrix — IsPositiveDefinite • matrixR</title>
+<title>Identity Matrix \(\mathbf{I}\) from Dimensions of Another Square Matrix — IdentityFrom • matrixR</title>
 
 
 <!-- jquery -->
@@ -39,10 +39,9 @@
 
 
 
-<meta property="og:title" content="Test for a Positive Definite Matrix — IsPositiveDefinite" />
-<meta property="og:description" content="IsPositiveDefinite() returns TRUE if A
-is a positive definite matrix,
-and FALSE otherwise." />
+<meta property="og:title" content="Identity Matrix \(\mathbf{I}\) from Dimensions of Another Square Matrix — IdentityFrom" />
+<meta property="og:description" content="Generates an identity matrix
+using the dimensions of an \(m \times m\) matrix \(\mathbf{A}\)." />
 
 
 
@@ -170,18 +169,17 @@ and FALSE otherwise." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Test for a Positive Definite Matrix</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jeksterslab/matrixR/blob/master/R/IsPositiveDefinite.R'><code>R/IsPositiveDefinite.R</code></a></small>
-    <div class="hidden name"><code>IsPositiveDefinite.Rd</code></div>
+    <h1>Identity Matrix \(\mathbf{I}\) from Dimensions of Another Square Matrix</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jeksterslab/matrixR/blob/master/R/Identity.R'><code>R/Identity.R</code></a></small>
+    <div class="hidden name"><code>IdentityFrom.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p><code>IsPositiveDefinite()</code> returns <code>TRUE</code> if <code>A</code>
-is a positive definite matrix,
-and <code>FALSE</code> otherwise.</p>
+    <p>Generates an identity matrix
+using the dimensions of an \(m \times m\) matrix \(\mathbf{A}\).</p>
     </div>
 
-    <pre class="usage"><span class='fu'>IsPositiveDefinite</span><span class='op'>(</span><span class='va'>A</span>, tol <span class='op'>=</span> <span class='fl'>1e-08</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>IdentityFrom</span><span class='op'>(</span><span class='va'>A</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -190,48 +188,38 @@ and <code>FALSE</code> otherwise.</p>
       <th>A</th>
       <td><p>Input.</p></td>
     </tr>
-    <tr>
-      <th>tol</th>
-      <td><p>Numeric. Tolerance.</p></td>
-    </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>Logical.</p>
+    <p>Numeric matrix.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>An \(m \times m\) symmetric matrix \(\mathbf{A}\)
-is positive definite
-if all of its eigenvalues are positive.</p>
-<p><code>A</code> is considered to be a positive definite matrix
-if <strong>NONE</strong> of its eigenvalues are less than or equal to
-a tolerance value.</p>
+    <p>The \(m \times m\) identity matrix \(\mathbf{I}\) is given by
+$$
+    \mathbf{I}_{m}
+    =
+    \mathrm{diag} \left(1, 1, \cdots, 1 \right) .
+  $$</p>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p><a href='https://en.wikipedia.org/wiki/Identity_matrix'>Wikipedia: Identity matrix</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other predicate functions: 
-<code><a href='IsDiagonal.html'>IsDiagonal</a>()</code>,
-<code><a href='IsIdempotent.html'>IsIdempotent</a>()</code>,
-<code><a href='IsInvertible.html'>IsInvertible</a>()</code>,
-<code><a href='IsMatrix.html'>IsMatrix</a>()</code>,
-<code><a href='IsNilpotent.html'>IsNilpotent</a>()</code>,
-<code><a href='IsOrthogonal.html'>IsOrthogonal</a>()</code>,
-<code><a href='IsScalar.html'>IsScalar</a>()</code>,
-<code><a href='IsSingular.html'>IsSingular</a>()</code>,
-<code><a href='IsSquareMatrix.html'>IsSquareMatrix</a>()</code>,
-<code><a href='IsSymmetric.html'>IsSymmetric</a>()</code>,
-<code><a href='IsVector.html'>IsVector</a>()</code></p></div>
+    <div class='dont-index'><p>Other constructor functions: 
+<code><a href='Identity.html'>Identity</a>()</code>,
+<code><a href='ZeroMatrixFrom.html'>ZeroMatrixFrom</a>()</code>,
+<code><a href='ZeroMatrix.html'>ZeroMatrix</a>()</code></p></div>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
     <p>Ivan Jacob Agaloos Pesigan</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># TRUE</span>
-<span class='fu'>IsPositiveDefinite</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] TRUE</div><div class='input'>
-<span class='co'># FALSE</span>
-<span class='fu'>IsPositiveDefinite</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>9</span>, ncol <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] FALSE</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>IdentityFrom</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>9</span>, ncol <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;      [,1] [,2] [,3]
+#&gt; [1,]    1    0    0
+#&gt; [2,]    0    1    0
+#&gt; [3,]    0    0    1</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
