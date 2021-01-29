@@ -23,12 +23,28 @@ library(matrixR)
 context("Test ZeroMatrix.")
 #'
 A <- matrix(1:9, ncol = 3)
+B <- matrix(1:10, ncol = 2)
 #'
 #+ testthat
 test_that("ZeroMatrix", {
   expect_equal(
-    0,
-    sum(ZeroMatrix(dim(A)[1])),
-    sum(ZeroMatrixFrom(A))
+    dim(A)[1],
+    dim(ZeroMatrix(dim(A)[1]))[1],
+    dim(ZeroMatrixFrom(A))[1]
+  )
+  expect_equal(
+    dim(A)[2],
+    dim(ZeroMatrix(dim(A)[1]))[2],
+    dim(ZeroMatrixFrom(A))[2]
+  )
+  expect_equal(
+    dim(B)[1],
+    dim(ZeroMatrix(dim(B)[1], dim(B)[2]))[1],
+    dim(ZeroMatrixFrom(B))[1]
+  )
+  expect_equal(
+    dim(B)[2],
+    dim(ZeroMatrix(dim(B)[1], dim(B)[2]))[2],
+    dim(ZeroMatrixFrom(B))[2]
   )
 })
