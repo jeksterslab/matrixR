@@ -65,9 +65,9 @@ Dot.yac_symbol <- function(t1,
                            ...) {
   expr <- paste0(
     "Dot(",
-      t1,
-      ",",
-      t2,
+    t1,
+    ",",
+    t2,
     ")"
   )
   if (str) {

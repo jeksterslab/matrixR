@@ -4,18 +4,18 @@
 \alias{Dot}
 \alias{Dot.default}
 \alias{Dot.yac_symbol}
-\title{Dot Product}
+\title{Dot Product of Tensors}
 \usage{
-Dot(u, v, ...)
+Dot(t1, t2, ...)
 
-\method{Dot}{default}(u, v, ...)
+\method{Dot}{default}(t1, t2, ...)
 
-\method{Dot}{yac_symbol}(u, v, str = TRUE, ...)
+\method{Dot}{yac_symbol}(t1, t2, str = TRUE, ...)
 }
 \arguments{
-\item{u}{Numeric vector of length \code{m}.}
+\item{t1}{Tensor. Vector or matrix.}
 
-\item{v}{Numeric vector of length \code{m}.}
+\item{t2}{Tensor. Vector or matrix.}
 
 \item{...}{...}
 
@@ -27,20 +27,26 @@ If \code{FALSE}, the function returns an \code{R} expression.}
 Numeric.
 }
 \description{
-Returns the dot product of two vectors.
+Returns the dot product (or inner product) of two tensors.
 }
 \details{
-The dot product is the sum of the products of corresponding entries
-of two vectors with the same length.
+This is a wrapper to the \code{\%*\%} infix operator and
+a compatibility layer to the \code{Yacas} \code{Dot} command.
+
+If any of the arguments is a scalar,
+the function performs scalar multiplication.
 }
 \examples{
-Dot(c(1, 3, -5), c(4, -2, -1))
-}
-\references{
-\href{https://en.wikipedia.org/wiki/Dot_product}{Wikipedia: Dot product}
+Dot(c(1, 2), 3)
+Dot(2, c(3, 4))
+Dot(c(1, 2), c(3, 4))
+Dot(rbind(c(1, 2), c(3, 4)), c(5, 6))
+Dot(c(5, 6), rbind(c(1, 2), c(3, 4)))
+Dot(rbind(c(1, 2), c(3, 4)), rbind(c(5, 6), c(7, 8)))
 }
 \seealso{
 Other operation functions: 
+\code{\link{Transpose}()},
 \code{\link{\%.\%}()}
 }
 \author{

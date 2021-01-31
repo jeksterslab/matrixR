@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dot Product — %.% • matrixR</title>
+<title>Transpose of a Matrix — Transpose • matrixR</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Dot Product — %.%" />
-<meta property="og:description" content="Returns the dot product (or inner product) of two tensors." />
+<meta property="og:title" content="Transpose of a Matrix — Transpose" />
+<meta property="og:description" content="Derives the tranpose of a matrix." />
 
 
 
@@ -168,52 +168,68 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Dot Product</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jeksterslab/matrixR/blob/master/R/Dot.R'><code>R/Dot.R</code></a></small>
-    <div class="hidden name"><code>grapes-.-grapes.Rd</code></div>
+    <h1>Transpose of a Matrix</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jeksterslab/matrixR/blob/master/R/Transpose.R'><code>R/Transpose.R</code></a></small>
+    <div class="hidden name"><code>Transpose.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Returns the dot product (or inner product) of two tensors.</p>
+    <p>Derives the tranpose of a matrix.</p>
     </div>
 
-    <pre class="usage"><span class='va'>t1</span> <span class='op'>%.%</span> <span class='va'>t2</span></pre>
+    <pre class="usage"><span class='fu'>Transpose</span><span class='op'>(</span><span class='va'>A</span>, <span class='va'>...</span><span class='op'>)</span>
+
+<span class='co'># S3 method for default</span>
+<span class='fu'>Transpose</span><span class='op'>(</span><span class='va'>A</span>, <span class='va'>...</span><span class='op'>)</span>
+
+<span class='co'># S3 method for yac_symbol</span>
+<span class='fu'>Transpose</span><span class='op'>(</span><span class='va'>A</span>, str <span class='op'>=</span> <span class='cn'>TRUE</span>, <span class='va'>...</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>t1</th>
-      <td><p>Tensor. Vector or matrix.</p></td>
+      <th>A</th>
+      <td><p>Input.</p></td>
     </tr>
     <tr>
-      <th>t2</th>
-      <td><p>Tensor. Vector or matrix.</p></td>
+      <th>...</th>
+      <td><p>...</p></td>
+    </tr>
+    <tr>
+      <th>str</th>
+      <td><p>Logical.
+If <code>TRUE</code>, the function returns a character string.
+If <code>FALSE</code>, the function returns an <code>R</code> expression.</p></td>
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
-
-    <p>Numeric.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>This is a wrapper to the <code><a href='https://rdrr.io/r/base/matmult.html'>%*%</a></code> infix operator and
-a compatibility layer to the <code>Yacas</code> <code>Dot</code> command.</p>
-<p>If any of the arguments is a scalar,
-the function performs scalar multiplication.</p>
+    <p>The transpose of an \(m \times n\) matrix \(\mathbf{A}\)
+is given by
+$$
+    \mathbf{A}_{i, j}^{\mathsf{T}} = \mathbf{A}_{j, i}
+  $$</p>
+<p>This is a wrapper around the <code>t</code> function
+and a compatibility layer to the <code>Yacas</code> <code>Transpose</code> command.</p>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p><a href='https://en.wikipedia.org/wiki/Transpose'>Wikipedia: Transpose</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other operation functions: 
 <code><a href='Dot.html'>Dot</a>()</code>,
-<code><a href='Transpose.html'>Transpose</a>()</code></p></div>
+<code><a href='%.%.html'>%.%</a>()</code></p></div>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
     <p>Ivan Jacob Agaloos Pesigan</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>3</span>, <span class='op'>-</span><span class='fl'>5</span><span class='op'>)</span> <span class='op'>%.%</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>4</span>, <span class='op'>-</span><span class='fl'>2</span>, <span class='op'>-</span><span class='fl'>1</span><span class='op'>)</span>
-</div><div class='output co'>#&gt;      [,1]
-#&gt; [1,]    3</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>Transpose</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>3</span>, <span class='fl'>2</span>, <span class='fl'>4</span><span class='op'>)</span>, ncol <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;      [,1] [,2]
+#&gt; [1,]    1    3
+#&gt; [2,]    2    4</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

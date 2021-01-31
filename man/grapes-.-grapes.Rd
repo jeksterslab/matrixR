@@ -4,32 +4,33 @@
 \alias{\%.\%}
 \title{Dot Product}
 \usage{
-u \%.\% v
+t1 \%.\% t2
 }
 \arguments{
-\item{u}{Numeric vector of length \code{m}.}
+\item{t1}{Tensor. Vector or matrix.}
 
-\item{v}{Numeric vector of length \code{m}.}
+\item{t2}{Tensor. Vector or matrix.}
 }
 \value{
 Numeric.
 }
 \description{
-Returns the dot product of two vectors.
+Returns the dot product (or inner product) of two tensors.
 }
 \details{
-The dot product is the sum of the products of corresponding entries
-of two vectors with the same length.
+This is a wrapper to the \code{\%*\%} infix operator and
+a compatibility layer to the \code{Yacas} \code{Dot} command.
+
+If any of the arguments is a scalar,
+the function performs scalar multiplication.
 }
 \examples{
 c(1, 3, -5) \%.\% c(4, -2, -1)
 }
-\references{
-\href{https://en.wikipedia.org/wiki/Dot_product}{Wikipedia: Dot product}
-}
 \seealso{
 Other operation functions: 
-\code{\link{Dot}()}
+\code{\link{Dot}()},
+\code{\link{Transpose}()}
 }
 \author{
 Ivan Jacob Agaloos Pesigan
