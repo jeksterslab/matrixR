@@ -29,6 +29,9 @@ Transpose <- function(A,
 #' @export
 Transpose.default <- function(A,
                               ...) {
+  if (is.vector(A)) {
+    A <- as.matrix(A)
+  }
   return(
     t(A)
   )
