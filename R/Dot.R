@@ -1,46 +1,35 @@
-#' Dot Product
+#' Dot Product of Tensors
 #'
-#' Returns the dot product of two vectors.
+#' Returns the dot product (or inner product) of two tensors.
 #'
-#' The dot product is the sum of the products of corresponding entries
-#' of two vectors with the same length.
+#' This is a wrapper to the `%*%` infix operator and
+#' a compatibility layer to the `Yacas` `Dot` command.
 #'
 #' @return Numeric.
 #' @author Ivan Jacob Agaloos Pesigan
 #' @family operation functions
 #' @keywords operation
-#' @param u Numeric vector of length `m`.
-#' @param v Numeric vector of length `m`.
+#' @param t1 Tensor. Vector or matrix.
+#' @param t2 Tensor. Vector or matrix.
 #' @param ... ...
 #' @examples
-#' Dot(c(1, 3, -5), c(4, -2, -1))
-#' @references
-#'   [Wikipedia: Dot product](https://en.wikipedia.org/wiki/Dot_product)
+#' Dot(c(1, 2), c(3, 4))
+#' Dot(rbind(c(1, 2), c(3, 4)), c(5, 6))
+#' Dot(c(5, 6), rbind(c(1, 2), c(3, 4)))
+#' Dot(rbind(c(1, 2), c(3, 4)), rbind(c(5, 6), c(7, 8)))
 #' @export
-Dot <- function(u, v, ...) {
+Dot <- function(t1,
+                t2,
+                ...) {
   UseMethod("Dot")
 }
 
 #' @rdname Dot
 #' @export
-Dot.default <- function(u, v, ...) {
-  u <- as.vector(u)
-  v <- as.vector(v)
-  if (length(u) != length(v)) {
-    stop(
-      "Inputs have unequal lengths."
-    )
-  }
-  if (isFALSE(is.numeric(u)) & isFALSE(is.numeric(v))) {
-    stop(
-      "Inputs should be numeric."
-    )
-  }
-  return(
-    sum(
-      u * v
-    )
-  )
+Dot.default <- function(t1,
+                        t2,
+                        ...) {
+  return(t1 %*% t2)
 }
 
 #' @rdname Dot
@@ -48,8 +37,8 @@ Dot.default <- function(u, v, ...) {
 #'   If `TRUE`, the function returns a character string.
 #'   If `FALSE`, the function returns an `R` expression.
 #' @export
-Dot.yac_symbol <- function(u, v, str = TRUE, ...) {
-  expr <- paste(u, ".", v)
+Dot.yac_symbol <- function(t1, t2, str = TRUE, ...) {
+  expr <- paste(t1, ".", t2)
   if (str) {
     return(
       Ryacas::yac_str(expr)
@@ -71,8 +60,8 @@ Dot.yac_symbol <- function(u, v, str = TRUE, ...) {
 #' @inherit Dot description details return references
 #' @inheritParams Dot
 #' @export
-"%.%" <- function(u, v) {
+"%.%" <- function(t1, t2) {
   return(
-    Dot.default(u, v)
+    Dot.default(t1, t2)
   )
 }
