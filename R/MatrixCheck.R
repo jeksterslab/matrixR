@@ -12,11 +12,14 @@
 #'   Test if input is a square matrix.
 #' @param IsSymmetric Logical.
 #'   Test if input is a symmetric matrix.
+#' @param IsNilpotent Logical.
+#'   Test if input is a nilponent matrix.
 #' @param ... ...
 #' @export
 MatrixCheck <- function(A,
                         IsSquareMatrix = FALSE,
                         IsSymmetric = FALSE,
+                        IsNilpotent = FALSE,
                         ...) {
   UseMethod("MatrixCheck")
 }
@@ -27,11 +30,20 @@ MatrixCheck <- function(A,
 MatrixCheck.default <- function(A,
                                 IsSquareMatrix = FALSE,
                                 IsSymmetric = FALSE,
+                                IsNilpotent = FALSE,
                                 ...) {
   if (IsSymmetric) {
     IsSquareMatrix <- FALSE
     stopifnot(
       IsSymmetric(
+        A
+      )
+    )
+  }
+  if (IsNilpotent) {
+    IsSquareMatrix <- FALSE
+    stopifnot(
+      IsNilpotent(
         A
       )
     )
@@ -53,6 +65,7 @@ MatrixCheck.default <- function(A,
 MatrixCheck.yac_symbol <- function(A,
                                    IsSquareMatrix = FALSE,
                                    IsSymmetric = FALSE,
+                                   IsNilpotent = FALSE,
                                    ...) {
   stopifnot(methods::is(A, "yac_symbol"))
   A <- Ryacas::ysym(
@@ -63,20 +76,13 @@ MatrixCheck.yac_symbol <- function(A,
   stopifnot(
     A$is_mat
   )
-  if (IsSymmetric) {
-    IsSquareMatrix <- FALSE
-    stopifnot(
-      IsSymmetric(
-        A
-      )
+  return(
+    MatrixCheck.default(
+      A = A,
+      IsSquareMatrix = IsSquareMatrix,
+      IsSymmetric = IsSymmetric,
+      # not yet available in yacas
+      IsNilpotent = FALSE
     )
-  }
-  if (IsSquareMatrix) {
-    stopifnot(
-      IsSquareMatrix(
-        A
-      )
-    )
-  }
-  return(A)
+  )
 }
