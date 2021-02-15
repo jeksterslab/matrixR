@@ -49,7 +49,7 @@
     <loc>https://github.com/jeksterslab/matrixR//reference/IsVector.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab/matrixR//reference/Transpose.html</loc>
+    <loc>https://github.com/jeksterslab/matrixR//reference/MatrixCheck.html</loc>
   </url>
   <url>
     <loc>https://github.com/jeksterslab/matrixR//reference/ZeroMatrix.html</loc>
@@ -107,6 +107,9 @@
   </url>
   <url>
     <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_IsVector.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_MatrixCheck.html</loc>
   </url>
   <url>
     <loc>https://github.com/jeksterslab/matrixR//articles/tests/test_ZeroMatrix.html</loc>

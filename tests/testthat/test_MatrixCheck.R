@@ -1,0 +1,105 @@
+#' ---
+#' title: "Test: MatrixCheck"
+#' author: "Ivan Jacob Agaloos Pesigan"
+#' date: "`r Sys.Date()`"
+#' output: rmarkdown::html_vignette
+#' vignette: >
+#'   %\VignetteIndexEntry{Test: MatrixCheck}
+#'   %\VignetteEngine{knitr::rmarkdown}
+#'   %\VignetteEncoding{UTF-8}
+#' ---
+#'
+#+ knitr_options, include=FALSE, cache=FALSE
+knitr::opts_chunk$set(
+  error = TRUE,
+  collapse = TRUE,
+  comment = "#>",
+  out.width = "100%"
+)
+#'
+#+ setup
+library(testthat)
+library(matrixR)
+context("Test MatrixCheck.")
+#'
+#+ testthat
+Symmetric <- Square <- matrix(
+  data = c(1, 2, 3, 2, 4, 5, 3, 5, 6),
+  ncol = 3
+)
+NotSquare <- matrix(
+  1:10,
+  ncol = 2
+)
+NotSymmetric <- matrix(
+  1:9,
+  ncol = 3
+)
+Nilpotent <- matrix(
+  data = c(0, 0, 1, 0), ncol = 2
+)
+NotNilpotent <- matrix(
+  data = c(1, 0, 0, 0), ncol = 2
+)
+test_that("fail.", {
+  expect_error(
+    MatrixCheck(NotSquare, IsSquareMatrix = TRUE)
+  )
+  expect_error(
+    MatrixCheck(NotSquare, IsSymmetric = TRUE)
+  )
+  expect_error(
+    MatrixCheck(NotSymmetric, IsSymmetric = TRUE)
+  )
+  expect_error(
+    MatrixCheck(NotNilpotent, IsNilpotent = TRUE)
+  )
+  # yac.symbol
+  expect_error(
+    MatrixCheck(Ryacas::ysym(NotSquare), IsSquareMatrix = TRUE)
+  )
+  expect_error(
+    MatrixCheck(Ryacas::ysym(NotSquare), IsSymmetric = TRUE)
+  )
+  expect_error(
+    MatrixCheck(Ryacas::ysym(NotSymmetric), IsSymmetric = TRUE)
+  )
+  # expect_error(
+  #  MatrixCheck(Ryacas::ysym(NotNilpotent), IsNilpotent = TRUE)
+  # )
+})
+test_that("pass.", {
+  expect_equal(
+    MatrixCheck(Square, IsSquareMatrix = TRUE),
+    Square
+  )
+  expect_equal(
+    MatrixCheck(Symmetric, IsSymmetric = TRUE),
+    Symmetric
+  )
+  expect_equal(
+    MatrixCheck(Symmetric, IsSquareMatrix = TRUE),
+    Symmetric
+  )
+  expect_equal(
+    MatrixCheck(Nilpotent, IsNilpotent = TRUE),
+    Nilpotent
+  )
+  # yac.symbol
+  expect_equal(
+    MatrixCheck(Ryacas::ysym(Square), IsSquareMatrix = TRUE),
+    Ryacas::ysym(Square)
+  )
+  expect_equal(
+    MatrixCheck(Ryacas::ysym(Symmetric), IsSymmetric = TRUE),
+    Ryacas::ysym(Symmetric)
+  )
+  expect_equal(
+    MatrixCheck(Ryacas::ysym(Symmetric), IsSquareMatrix = TRUE),
+    Ryacas::ysym(Symmetric)
+  )
+  # expect_equal(
+  #  MatrixCheck(Ryacas::ysym(Nilpotent), IsNilpotent = TRUE),
+  #  Ryacas::ysym(Nilpotent)
+  # )
+})

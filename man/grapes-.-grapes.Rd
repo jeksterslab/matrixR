@@ -29,8 +29,7 @@ c(1, 3, -5) \%.\% c(4, -2, -1)
 }
 \seealso{
 Other operation functions: 
-\code{\link{Dot}()},
-\code{\link{Transpose}()}
+\code{\link{Dot}()}
 }
 \author{
 Ivan Jacob Agaloos Pesigan

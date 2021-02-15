@@ -56,7 +56,8 @@ Other predicate functions:
 \code{\link{IsScalar}()},
 \code{\link{IsSingular}()},
 \code{\link{IsSquareMatrix}()},
-\code{\link{IsSymmetric}()}
+\code{\link{IsSymmetric}()},
+\code{\link{MatrixCheck}()}
 }
 \author{
 Ivan Jacob Agaloos Pesigan

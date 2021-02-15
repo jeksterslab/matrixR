@@ -46,7 +46,6 @@ Dot(rbind(c(1, 2), c(3, 4)), rbind(c(5, 6), c(7, 8)))
 }
 \seealso{
 Other operation functions: 
-\code{\link{Transpose}()},
 \code{\link{\%.\%}()}
 }
 \author{

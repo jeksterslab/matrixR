@@ -54,7 +54,8 @@ Other predicate functions:
 \code{\link{IsSingular}()},
 \code{\link{IsSquareMatrix}()},
 \code{\link{IsSymmetric}()},
-\code{\link{IsVector}()}
+\code{\link{IsVector}()},
+\code{\link{MatrixCheck}()}
 }
 \author{
 Ivan Jacob Agaloos Pesigan
