@@ -64,6 +64,10 @@ test_that("fail.", {
   expect_error(
     MatrixCheck(Ryacas::ysym(NotSymmetric), IsSymmetric = TRUE)
   )
+  # vector
+  expect_error(
+    MatrixCheck(Ryacas::ysym(as.vector(Square)), IsSquareMatrix = TRUE)
+  )
   # expect_error(
   #  MatrixCheck(Ryacas::ysym(NotNilpotent), IsNilpotent = TRUE)
   # )

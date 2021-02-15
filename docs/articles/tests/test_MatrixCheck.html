@@ -188,11 +188,15 @@
   <span class="fu"><a href="https://testthat.r-lib.org/reference/expect_error.html">expect_error</a></span><span class="op">(</span>
     <span class="fu"><a href="../../reference/MatrixCheck.html">MatrixCheck</a></span><span class="op">(</span><span class="fu">Ryacas</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/Ryacas/man/ysym.html">ysym</a></span><span class="op">(</span><span class="va">NotSymmetric</span><span class="op">)</span>, IsSymmetric <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
   <span class="op">)</span>
+  <span class="co"># vector</span>
+  <span class="fu"><a href="https://testthat.r-lib.org/reference/expect_error.html">expect_error</a></span><span class="op">(</span>
+    <span class="fu"><a href="../../reference/MatrixCheck.html">MatrixCheck</a></span><span class="op">(</span><span class="fu">Ryacas</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/Ryacas/man/ysym.html">ysym</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/vector.html">as.vector</a></span><span class="op">(</span><span class="va">Square</span><span class="op">)</span><span class="op">)</span>, IsSquareMatrix <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
+  <span class="op">)</span>
   <span class="co"># expect_error(</span>
   <span class="co">#  MatrixCheck(Ryacas::ysym(NotNilpotent), IsNilpotent = TRUE)</span>
   <span class="co"># )</span>
 <span class="op">}</span><span class="op">)</span>
-<span class="co">#&gt; Test passed 😀</span>
+<span class="co">#&gt; Test passed 🎉</span>
 <span class="fu"><a href="https://testthat.r-lib.org/reference/test_that.html">test_that</a></span><span class="op">(</span><span class="st">"pass."</span>, <span class="op">{</span>
   <span class="fu"><a href="https://testthat.r-lib.org/reference/equality-expectations.html">expect_equal</a></span><span class="op">(</span>
     <span class="fu"><a href="../../reference/MatrixCheck.html">MatrixCheck</a></span><span class="op">(</span><span class="va">Square</span>, IsSquareMatrix <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,
@@ -228,7 +232,7 @@
   <span class="co">#  Ryacas::ysym(Nilpotent)</span>
   <span class="co"># )</span>
 <span class="op">}</span><span class="op">)</span>
-<span class="co">#&gt; Test passed 🥳</span></code></pre></div>
+<span class="co">#&gt; Test passed 😸</span></code></pre></div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

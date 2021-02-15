@@ -68,14 +68,9 @@ MatrixCheck.yac_symbol <- function(A,
                                    IsNilpotent = FALSE,
                                    ...) {
   stopifnot(methods::is(A, "yac_symbol"))
-  A <- Ryacas::ysym(
-    Ryacas::yac_str(
-      A$yacas_cmd
-    )
-  )
-  stopifnot(
-    A$is_mat
-  )
+  y_res <- Ryacas::yac_str(A$yacas_cmd)
+  y <- Ryacas::ysym(y_res)
+  stopifnot(y$is_mat)
   return(
     MatrixCheck.default(
       A = A,
